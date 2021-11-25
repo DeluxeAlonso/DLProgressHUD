@@ -1,0 +1,6 @@
+framework module DLProgressHUD {
+  umbrella header "DLProgressHUD-umbrella.h"
+
+  export *
+  module * { export * }
+}

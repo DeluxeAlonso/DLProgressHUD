@@ -1,0 +1,22 @@
+{
+  "name": "DLProgressHUD",
+  "version": "0.1.0",
+  "summary": "A short description of DLProgressHUD.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/DeluxeAlonso/DLProgressHUD",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "DeluxeAlonso": "alonso.alvarez@pucp.pe"
+  },
+  "source": {
+    "git": "https://github.com/DeluxeAlonso/DLProgressHUD.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "DLProgressHUD/Classes/**/*"
+}
