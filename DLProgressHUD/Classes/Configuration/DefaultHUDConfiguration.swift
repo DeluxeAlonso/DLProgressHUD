@@ -31,6 +31,6 @@ public class DefaultHudConfiguration: HudConfigurationProtocol {
 
     public var hudContentCornerRadius: CGFloat = 10.0
 
-    public var presentationAnimationDuration: CGFloat = 0.5
+    public var presentationAnimationDuration: CGFloat = 0.3
 
 }
