@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func showHUDAction(_ sender: Any) {
-        
+        DLProgressHUD.shared.show()
     }
 
 }
