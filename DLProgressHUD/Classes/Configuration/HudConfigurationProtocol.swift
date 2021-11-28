@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol HudConfigurationProtocol {
+public protocol HudConfigurationProtocol {
 
     var backgroundColor: UIColor { get }
     var hudColor: UIColor { get }
