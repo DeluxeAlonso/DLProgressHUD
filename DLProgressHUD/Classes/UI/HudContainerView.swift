@@ -77,7 +77,7 @@ class HudActivityIndicatorView: UIView {
 
     private func setupUI() {
         activityIndicatorView.color = configuration.activityIndicatorColor
-        activityIndicatorView.activityIndicatorViewStyle = configuration.activityIndicatorStyle
+        activityIndicatorView.style = configuration.activityIndicatorStyle
 
         addSubview(activityIndicatorView)
         NSLayoutConstraint.activate([activityIndicatorView.centerXAnchor.constraint(equalTo: centerXAnchor),
