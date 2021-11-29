@@ -22,9 +22,9 @@ class ViewController: UIViewController {
     }
 
     @IBAction func showHUDAction(_ sender: Any) {
-        DLProgressHUD.shared.show { _ in
+        DLProgressHUD.show { _ in
             DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-                DLProgressHUD.shared.dismiss(with: 0.25)
+                DLProgressHUD.dismiss(with: 0.25)
             }
         }
     }

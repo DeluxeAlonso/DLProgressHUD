@@ -9,13 +9,13 @@ import Foundation
 
 public class DLProgressHUD {
 
-    public static let shared = DLProgressHUD()
+    static let shared = DLProgressHUD()
 
     private var hudContainerView: HudContainerView?
 
     init() {}
 
-    public func show(with configuration: HudConfigurationProtocol = DefaultHudConfiguration.shared,
+    func show(with configuration: HudConfigurationProtocol = DefaultHudConfiguration.shared,
               completion: ((Bool) -> Void)? = nil) {
         // If hud is already being shown we dismiss it.
         if hudContainerView != nil { dismiss() }
@@ -36,13 +36,26 @@ public class DLProgressHUD {
         })
     }
 
-    public func dismiss(with animationDuration: TimeInterval = 0.0) {
+    func dismiss(with animationDuration: TimeInterval = 0.0) {
         UIView.animate(withDuration: animationDuration, delay: 0.0, options: [.curveEaseOut], animations: {
             self.hudContainerView?.alpha = 0.0
         }, completion: { _ in
             self.hudContainerView?.removeFromSuperview()
             self.hudContainerView = nil
         })
+    }
+
+}
+
+public extension DLProgressHUD {
+
+    class func show(with configuration: HudConfigurationProtocol = DefaultHudConfiguration.shared,
+                    completion: ((Bool) -> Void)? = nil) {
+        DLProgressHUD.shared.show(with: configuration, completion: completion)
+    }
+
+    class func dismiss(with animationDuration: TimeInterval = 0.0) {
+        DLProgressHUD.shared.dismiss(with: animationDuration)
     }
 
 }
