@@ -22,6 +22,8 @@ public protocol HudConfigurationProtocol {
 
     var hudContentCornerRadius: CGFloat { get }
 
+    var hudContentVisualEffectBlurStyle: UIBlurEffect.Style { get }
+
     var presentationAnimationDuration: CGFloat { get }
 
 }
