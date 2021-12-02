@@ -26,6 +26,6 @@ public protocol HudConfigurationProtocol {
 
     var presentationAnimationDuration: CGFloat { get }
 
-    var shouldDisabledBackgroundInteraction: Bool { get }
+    var backgroundInteractionEnabled: Bool { get }
 
 }
