@@ -17,7 +17,11 @@ class HudContainerView: UIView {
         return view
     }()
 
+    // MARK: - Dependencies
+
     private let configuration: HudConfigurationProtocol
+
+    // MARK: - Initializers
 
     init(configuration: HudConfigurationProtocol) {
         self.configuration = configuration
@@ -29,6 +33,8 @@ class HudContainerView: UIView {
     required init?(coder aDecoder: NSCoder) {
         fatalError()
     }
+
+    // MARK: - Private
 
     private func setupUI() {
         isUserInteractionEnabled = configuration.backgroundInteractionEnabled
@@ -51,39 +57,6 @@ class HudContainerView: UIView {
                                      indicatorView.trailingAnchor.constraint(equalTo: hudContentView.trailingAnchor),
                                      indicatorView.topAnchor.constraint(equalTo: hudContentView.topAnchor),
                                      indicatorView.bottomAnchor.constraint(equalTo: hudContentView.bottomAnchor)])
-    }
-
-}
-
-class HudActivityIndicatorView: UIView {
-
-    private lazy var activityIndicatorView: UIActivityIndicatorView = {
-        let activityIndicatorView = UIActivityIndicatorView()
-        activityIndicatorView.startAnimating()
-        activityIndicatorView.translatesAutoresizingMaskIntoConstraints = false
-        return activityIndicatorView
-    }()
-
-    private let configuration: HudConfigurationProtocol
-
-    init(configuration: HudConfigurationProtocol) {
-        self.configuration = configuration
-        super.init(frame: UIScreen.main.bounds)
-
-        setupUI()
-    }
-
-    required init?(coder aDecoder: NSCoder) {
-        fatalError()
-    }
-
-    private func setupUI() {
-        activityIndicatorView.color = configuration.activityIndicatorColor
-        activityIndicatorView.style = configuration.activityIndicatorStyle
-
-        addSubview(activityIndicatorView)
-        NSLayoutConstraint.activate([activityIndicatorView.centerXAnchor.constraint(equalTo: centerXAnchor),
-                                     activityIndicatorView.centerYAnchor.constraint(equalTo: centerYAnchor)])
     }
 
 }
