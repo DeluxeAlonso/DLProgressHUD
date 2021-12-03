@@ -17,7 +17,11 @@ class HudContainerView: UIView {
         return view
     }()
 
+    // MARK: - Dependencies
+
     private let configuration: HudConfigurationProtocol
+
+    // MARK: - Initializers
 
     init(configuration: HudConfigurationProtocol) {
         self.configuration = configuration
@@ -29,6 +33,8 @@ class HudContainerView: UIView {
     required init?(coder aDecoder: NSCoder) {
         fatalError()
     }
+
+    // MARK: - Private
 
     private func setupUI() {
         isUserInteractionEnabled = configuration.backgroundInteractionEnabled
