@@ -16,7 +16,11 @@ class HudActivityIndicatorView: UIView {
         return activityIndicatorView
     }()
 
+    // MARK: - Dependencies
+
     private let configuration: HudConfigurationProtocol
+
+    // MARK: - Initializers
 
     init(configuration: HudConfigurationProtocol) {
         self.configuration = configuration
@@ -28,6 +32,8 @@ class HudActivityIndicatorView: UIView {
     required init?(coder aDecoder: NSCoder) {
         fatalError()
     }
+
+    // MARK: - Private
 
     private func setupUI() {
         activityIndicatorView.color = configuration.activityIndicatorColor
