@@ -28,7 +28,7 @@ public class DLProgressHUD {
         mainWindow.addSubview(hudContainerView)
         
         UIView.animate(withDuration: configuration.presentationAnimationDuration,
-                       delay: 0.0,
+                       delay: configuration.presentationAnimationDelay,
                        options: [.curveEaseOut], animations: {
             hudContainerView.alpha = 1.0
         }, completion: { completed in
