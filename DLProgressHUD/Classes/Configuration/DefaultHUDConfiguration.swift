@@ -35,6 +35,8 @@ public class DefaultHudConfiguration: HudConfigurationProtocol {
 
     public var presentationAnimationDuration: CGFloat = 0.3
 
+    public var presentationAnimationDelay: CGFloat = 0.0
+
     public var backgroundInteractionEnabled: Bool = false
 
 }

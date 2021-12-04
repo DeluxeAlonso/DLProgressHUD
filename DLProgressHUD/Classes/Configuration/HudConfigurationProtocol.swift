@@ -25,6 +25,7 @@ public protocol HudConfigurationProtocol {
     var hudContentVisualEffectBlurStyle: UIBlurEffect.Style { get }
 
     var presentationAnimationDuration: CGFloat { get }
+    var presentationAnimationDelay: CGFloat { get }
 
     var backgroundInteractionEnabled: Bool { get }
 
