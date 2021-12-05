@@ -83,7 +83,6 @@ class HudActivityIndicatorView: UIView {
         if let text = text {
             let textLabelContainerView = UIView()
             textLabelContainerView.addSubview(textLabel)
-            textLabel.backgroundColor = .red
             NSLayoutConstraint.activate([
                 textLabel.topAnchor.constraint(equalTo: textLabelContainerView.topAnchor, constant: 8),
                 textLabel.bottomAnchor.constraint(equalTo: textLabelContainerView.bottomAnchor, constant: -8),
