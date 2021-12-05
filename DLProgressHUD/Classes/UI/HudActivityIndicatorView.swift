@@ -80,7 +80,7 @@ class HudActivityIndicatorView: UIView {
         ])
 
         stackView.addArrangedSubview(activityIndicatorContainerView)
-        if let text = descriptionText {
+        if let descriptionText = descriptionText {
             let textLabelContainerView = UIView()
             textLabelContainerView.addSubview(textLabel)
             NSLayoutConstraint.activate([
@@ -91,7 +91,7 @@ class HudActivityIndicatorView: UIView {
             ])
 
             stackView.addArrangedSubview(textLabelContainerView)
-            textLabel.text = text
+            textLabel.text = descriptionText
         }
     }
 
