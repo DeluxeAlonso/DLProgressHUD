@@ -13,7 +13,7 @@ class HudActivityIndicatorView: UIView {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.distribution = .fillProportionally
-        stackView.spacing = 8
+        stackView.spacing = 10
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
@@ -29,7 +29,7 @@ class HudActivityIndicatorView: UIView {
 
     private lazy var textLabel: UILabel = {
         let label = UILabel()
-        label.numberOfLines = 1
+        label.numberOfLines = 0
         label.textAlignment = .center
         label.setContentHuggingPriority(.required, for: .vertical)
         label.setContentCompressionResistancePriority(.required, for: .horizontal)
@@ -84,8 +84,8 @@ class HudActivityIndicatorView: UIView {
             let textLabelContainerView = UIView()
             textLabelContainerView.addSubview(textLabel)
             NSLayoutConstraint.activate([
-                textLabel.topAnchor.constraint(equalTo: textLabelContainerView.topAnchor, constant: 8),
-                textLabel.bottomAnchor.constraint(equalTo: textLabelContainerView.bottomAnchor, constant: -8),
+                textLabel.topAnchor.constraint(equalTo: textLabelContainerView.topAnchor),
+                textLabel.bottomAnchor.constraint(equalTo: textLabelContainerView.bottomAnchor),
                 textLabel.leadingAnchor.constraint(equalTo: textLabelContainerView.leadingAnchor, constant: 8),
                 textLabel.trailingAnchor.constraint(equalTo: textLabelContainerView.trailingAnchor, constant: -8)
             ])
