@@ -41,13 +41,13 @@ class HudActivityIndicatorView: UIView {
 
     private let configuration: HudConfigurationProtocol
 
-    private let text: String?
+    private let descriptionText: String?
 
     // MARK: - Initializers
 
-    init(configuration: HudConfigurationProtocol, text: String? = "Loading...") {
+    init(configuration: HudConfigurationProtocol, descriptionText: String? = "Loading...") {
         self.configuration = configuration
-        self.text = text
+        self.descriptionText = descriptionText
         super.init(frame: UIScreen.main.bounds)
 
         setupUI()
@@ -80,7 +80,7 @@ class HudActivityIndicatorView: UIView {
         ])
 
         stackView.addArrangedSubview(activityIndicatorContainerView)
-        if let text = text {
+        if let text = descriptionText {
             let textLabelContainerView = UIView()
             textLabelContainerView.addSubview(textLabel)
             NSLayoutConstraint.activate([
