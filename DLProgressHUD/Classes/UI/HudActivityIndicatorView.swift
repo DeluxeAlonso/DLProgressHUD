@@ -69,7 +69,6 @@ class HudActivityIndicatorView: UIView {
                                      stackView.centerXAnchor.constraint(equalTo: centerXAnchor)])
 
         let activityIndicatorContainerView = UIView()
-        activityIndicatorContainerView.translatesAutoresizingMaskIntoConstraints = false
         activityIndicatorContainerView.addSubview(activityIndicatorView)
         NSLayoutConstraint.activate([
             activityIndicatorView.centerXAnchor.constraint(equalTo: activityIndicatorContainerView.centerXAnchor),
@@ -94,15 +93,6 @@ class HudActivityIndicatorView: UIView {
             stackView.addArrangedSubview(textLabelContainerView)
             textLabel.text = text
         }
-    }
-
-    private func setupActivityIndicatorView() {
-        activityIndicatorView.color = configuration.activityIndicatorColor
-        activityIndicatorView.style = configuration.activityIndicatorStyle
-
-        addSubview(activityIndicatorView)
-        NSLayoutConstraint.activate([activityIndicatorView.centerXAnchor.constraint(equalTo: centerXAnchor),
-                                     activityIndicatorView.centerYAnchor.constraint(equalTo: centerYAnchor)])
     }
 
 }
