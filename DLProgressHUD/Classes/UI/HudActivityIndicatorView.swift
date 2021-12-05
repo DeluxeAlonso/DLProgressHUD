@@ -45,7 +45,7 @@ class HudActivityIndicatorView: UIView {
 
     // MARK: - Initializers
 
-    init(configuration: HudConfigurationProtocol, descriptionText: String? = "Loading...") {
+    init(configuration: HudConfigurationProtocol, descriptionText: String? = nil) {
         self.configuration = configuration
         self.descriptionText = descriptionText
         super.init(frame: UIScreen.main.bounds)
