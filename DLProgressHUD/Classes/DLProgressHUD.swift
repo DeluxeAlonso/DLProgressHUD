@@ -48,8 +48,9 @@ public class DLProgressHUD {
 
 public extension DLProgressHUD {
     
-    class func show(_ configuration: HudConfigurationProtocol = DefaultHudConfiguration.shared,
-                    _ mode: Mode = .loading, completion: ((Bool) -> Void)? = nil) {
+    class func show(_ mode: Mode = .loading,
+                    configuration: HudConfigurationProtocol = DefaultHudConfiguration.shared,
+                    completion: ((Bool) -> Void)? = nil) {
         DLProgressHUD.shared.show(with: configuration, and: mode, completion: completion)
     }
     
