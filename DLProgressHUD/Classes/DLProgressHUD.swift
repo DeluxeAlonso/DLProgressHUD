@@ -15,12 +15,11 @@ public class DLProgressHUD {
     
     init() {}
     
-    private func show(with configuration: HudConfigurationProtocol = DefaultHudConfiguration.shared,
-                      completion: ((Bool) -> Void)? = nil) {
+    private func show(with configuration: HudConfigurationProtocol, and mode: Mode, completion: ((Bool) -> Void)?) {
         // If hud is already being shown we dismiss it.
         if hudContainerView != nil { dismiss() }
         
-        hudContainerView = HudContainerView(configuration: configuration)
+        hudContainerView = HudContainerView(configuration: configuration, hudMode: mode)
         guard let hudContainerView = hudContainerView else { return }
         hudContainerView.alpha = 0.0
         
@@ -49,13 +48,22 @@ public class DLProgressHUD {
 
 public extension DLProgressHUD {
     
-    class func show(with configuration: HudConfigurationProtocol = DefaultHudConfiguration.shared,
-                    completion: ((Bool) -> Void)? = nil) {
-        DLProgressHUD.shared.show(with: configuration, completion: completion)
+    class func show(_ configuration: HudConfigurationProtocol = DefaultHudConfiguration.shared,
+                    _ mode: Mode = .loading, completion: ((Bool) -> Void)? = nil) {
+        DLProgressHUD.shared.show(with: configuration, and: mode, completion: completion)
     }
     
     class func dismiss(with animationDuration: TimeInterval = 0.0) {
         DLProgressHUD.shared.dismiss(with: animationDuration)
     }
     
+}
+
+public extension DLProgressHUD {
+
+    enum Mode {
+        case loading
+        case loadingWithText(_ text: String)
+    }
+
 }
