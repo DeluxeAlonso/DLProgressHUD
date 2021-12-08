@@ -12,7 +12,7 @@ import DLProgressHUD
 class ViewController: UIViewController {
 
     @IBAction func showHUDAction(_ sender: Any) {
-        DLProgressHUD.show { _ in
+        DLProgressHUD.show(.loadingWithText("Loading...")) { _ in
             DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
                 DLProgressHUD.dismiss(with: 0.25)
             }

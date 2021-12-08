@@ -20,11 +20,13 @@ class HudContainerView: UIView {
     // MARK: - Dependencies
 
     private let configuration: HudConfigurationProtocol
+    private let hudMode: DLProgressHUD.Mode
 
     // MARK: - Initializers
 
-    init(configuration: HudConfigurationProtocol) {
+    init(configuration: HudConfigurationProtocol, hudMode: DLProgressHUD.Mode) {
         self.configuration = configuration
+        self.hudMode = hudMode
         super.init(frame: UIScreen.main.bounds)
 
         setupUI()
@@ -50,13 +52,22 @@ class HudContainerView: UIView {
                                      hudContentView.heightAnchor.constraint(equalToConstant: configuration.hudContentPreferredHeight),
                                      hudContentView.widthAnchor.constraint(equalToConstant: configuration.hudContentPreferredWidth)])
 
-        let indicatorView = HudActivityIndicatorView(configuration: configuration)
-        indicatorView.translatesAutoresizingMaskIntoConstraints = false
-        hudContentView.contentView.addSubview(indicatorView)
-        NSLayoutConstraint.activate([indicatorView.leadingAnchor.constraint(equalTo: hudContentView.leadingAnchor),
-                                     indicatorView.trailingAnchor.constraint(equalTo: hudContentView.trailingAnchor),
-                                     indicatorView.topAnchor.constraint(equalTo: hudContentView.topAnchor),
-                                     indicatorView.bottomAnchor.constraint(equalTo: hudContentView.bottomAnchor)])
+        let contentView = makeContentView(for: hudMode)
+        contentView.translatesAutoresizingMaskIntoConstraints = false
+        hudContentView.contentView.addSubview(contentView)
+        NSLayoutConstraint.activate([contentView.leadingAnchor.constraint(equalTo: hudContentView.leadingAnchor),
+                                     contentView.trailingAnchor.constraint(equalTo: hudContentView.trailingAnchor),
+                                     contentView.topAnchor.constraint(equalTo: hudContentView.topAnchor),
+                                     contentView.bottomAnchor.constraint(equalTo: hudContentView.bottomAnchor)])
+    }
+
+    private func makeContentView(for hudMode: DLProgressHUD.Mode) -> UIView {
+        switch hudMode {
+        case .loading:
+            return HudActivityIndicatorView(configuration: configuration)
+        case .loadingWithText(let text):
+            return HudActivityIndicatorView(configuration: configuration, descriptionText: text)
+        }
     }
 
 }
