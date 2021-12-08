@@ -29,7 +29,7 @@ class HudActivityIndicatorView: UIView {
 
     private lazy var textLabel: UILabel = {
         let label = UILabel()
-        label.numberOfLines = 0
+        label.numberOfLines = configuration.descriptionTextNumberOfLines
         label.textAlignment = .center
         label.font = configuration.descriptionTextFont
         label.textColor = configuration.descriptionTextColor
