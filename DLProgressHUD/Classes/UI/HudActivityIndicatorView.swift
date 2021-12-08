@@ -13,7 +13,7 @@ class HudActivityIndicatorView: UIView {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.distribution = .fillProportionally
-        stackView.spacing = 10
+        stackView.spacing = 12
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
@@ -29,8 +29,10 @@ class HudActivityIndicatorView: UIView {
 
     private lazy var textLabel: UILabel = {
         let label = UILabel()
-        label.numberOfLines = 0
+        label.numberOfLines = configuration.descriptionTextNumberOfLines
         label.textAlignment = .center
+        label.font = configuration.descriptionTextFont
+        label.textColor = configuration.descriptionTextColor
         label.setContentHuggingPriority(.required, for: .vertical)
         label.setContentCompressionResistancePriority(.required, for: .horizontal)
         label.translatesAutoresizingMaskIntoConstraints = false

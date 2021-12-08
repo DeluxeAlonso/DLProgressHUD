@@ -29,4 +29,8 @@ public protocol HudConfigurationProtocol {
 
     var backgroundInteractionEnabled: Bool { get }
 
+    var descriptionTextFont: UIFont { get }
+    var descriptionTextColor: UIColor { get }
+    var descriptionTextNumberOfLines: Int { get }
+
 }
