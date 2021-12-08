@@ -43,4 +43,6 @@ public class DefaultHudConfiguration: HudConfigurationProtocol {
 
     public var descriptionTextColor: UIColor = .black
 
+    public var descriptionTextNumberOfLines: Int = 0
+
 }

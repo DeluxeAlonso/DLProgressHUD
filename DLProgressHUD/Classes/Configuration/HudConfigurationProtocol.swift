@@ -31,5 +31,6 @@ public protocol HudConfigurationProtocol {
 
     var descriptionTextFont: UIFont { get }
     var descriptionTextColor: UIColor { get }
+    var descriptionTextNumberOfLines: Int { get }
 
 }
