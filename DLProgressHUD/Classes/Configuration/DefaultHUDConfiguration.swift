@@ -39,7 +39,7 @@ public class DefaultHudConfiguration: HudConfigurationProtocol {
 
     public var backgroundInteractionEnabled: Bool = false
 
-    public var descriptionTextFont: UIFont = .systemFont(ofSize: 12)
+    public var descriptionTextFont: UIFont = .systemFont(ofSize: 16)
 
     public var descriptionTextColor: UIColor = .black
 
