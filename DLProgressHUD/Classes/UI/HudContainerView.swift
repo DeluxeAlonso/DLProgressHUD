@@ -39,7 +39,7 @@ class HudContainerView: UIView {
     // MARK: - Private
 
     private func setupUI() {
-        isUserInteractionEnabled = configuration.backgroundInteractionEnabled
+        isUserInteractionEnabled = !configuration.backgroundInteractionEnabled
 
         backgroundColor = configuration.backgroundColor
 
