@@ -18,17 +18,17 @@ class ViewController: UIViewController {
 
     @IBAction func showHUDAction(_ sender: Any) {
         DLProgressHUD.show(.loading) { _ in
-            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-                DLProgressHUD.dismiss(with: 0.25)
-            }
+//            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+//                DLProgressHUD.dismiss(with: 0.25)
+//            }
         }
     }
 
     @IBAction func showHUDWithTextAction(_ sender: Any) {
         DLProgressHUD.show(.loadingWithText("Loading...")) { _ in
-            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-                DLProgressHUD.dismiss(with: 0.25)
-            }
+//            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+//                DLProgressHUD.dismiss(with: 0.25)
+//            }
         }
     }
 
