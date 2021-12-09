@@ -54,6 +54,8 @@ public class DLProgressHUD {
 }
 
 public extension DLProgressHUD {
+
+    static var defaultConfiguration = DefaultHudConfiguration.shared
     
     class func show(_ mode: Mode = .loading,
                     configuration: HudConfigurationProtocol = DefaultHudConfiguration.shared,

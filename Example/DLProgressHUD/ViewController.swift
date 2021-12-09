@@ -13,23 +13,15 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        DefaultHudConfiguration.shared.backgroundInteractionEnabled = true
+        DLProgressHUD.defaultConfiguration.backgroundInteractionEnabled = true
     }
 
     @IBAction func showHUDAction(_ sender: Any) {
-        DLProgressHUD.show(.loading) { _ in
-//            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-//                DLProgressHUD.dismiss(with: 0.25)
-//            }
-        }
+        DLProgressHUD.show(.loading)
     }
 
     @IBAction func showHUDWithTextAction(_ sender: Any) {
-        DLProgressHUD.show(.loadingWithText("Loading...")) { _ in
-//            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-//                DLProgressHUD.dismiss(with: 0.25)
-//            }
-        }
+        DLProgressHUD.show(.loadingWithText("Loading..."))
     }
 
 }
