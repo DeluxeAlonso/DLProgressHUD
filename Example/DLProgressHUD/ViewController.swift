@@ -11,6 +11,11 @@ import DLProgressHUD
 
 class ViewController: UIViewController {
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        DefaultHudConfiguration.shared.backgroundInteractionEnabled = true
+    }
+
     @IBAction func showHUDAction(_ sender: Any) {
         DLProgressHUD.show(.loading) { _ in
             DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
