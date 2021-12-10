@@ -74,6 +74,7 @@ public extension DLProgressHUD {
     enum Mode {
         case loading
         case loadingWithText(_ text: String)
+        case textOnly(_ text: String)
     }
 
 }

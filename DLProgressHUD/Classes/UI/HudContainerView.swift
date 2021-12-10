@@ -67,6 +67,8 @@ class HudContainerView: UIView {
             return HudActivityIndicatorView(configuration: configuration)
         case .loadingWithText(let text):
             return HudActivityIndicatorView(configuration: configuration, descriptionText: text)
+        case .textOnly(let text):
+            return HudTextOnlyView(configuration: configuration, descriptionText: text)
         }
     }
 
