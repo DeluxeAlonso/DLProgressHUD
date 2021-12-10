@@ -24,4 +24,8 @@ class ViewController: UIViewController {
         DLProgressHUD.show(.loadingWithText("Loading..."))
     }
 
+    @IBAction func showHUDWithTextOnlyAction(_ sender: Any) {
+        DLProgressHUD.show(.textOnly("Loading..."))
+    }
+
 }
