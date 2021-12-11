@@ -21,6 +21,7 @@
 		E08CF28F1F3E9AC220D66017775F51E8 /* DLProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2C32D6E517E6035DA2614DBCFD42A5 /* DLProgressHUD.swift */; };
 		E20911C127631E0100DFFC68 /* HudTextOnlyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20911C027631E0100DFFC68 /* HudTextOnlyView.swift */; };
 		E254A0122759ECEC0034BE8D /* HudActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E254A0112759ECEC0034BE8D /* HudActivityIndicatorView.swift */; };
+		E2F136162764754300DD1186 /* HudImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F136152764754300DD1186 /* HudImageView.swift */; };
 		EE7DEFC9F6D6D7B1A8263C0D12EE32A9 /* Pods-DLProgressHUD_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A8E5097942CDE2CB84A8B7EFC929B9 /* Pods-DLProgressHUD_Example-dummy.m */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +76,7 @@
 		DC5899AC831B63DC98A2D585F0E8A16F /* DLProgressHUD.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = DLProgressHUD.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		E20911C027631E0100DFFC68 /* HudTextOnlyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HudTextOnlyView.swift; sourceTree = "<group>"; };
 		E254A0112759ECEC0034BE8D /* HudActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HudActivityIndicatorView.swift; sourceTree = "<group>"; };
+		E2F136152764754300DD1186 /* HudImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HudImageView.swift; sourceTree = "<group>"; };
 		E4B583A9E1A04E20BB177752E08C8202 /* Pods-DLProgressHUD_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DLProgressHUD_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		EFC5AA8CE95F0D60303C4D7A1675B6F1 /* HudConfigurationProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HudConfigurationProtocol.swift; sourceTree = "<group>"; };
 		F3DD9388033B22DA1143D2458092E71C /* DLProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DLProgressHUD-prefix.pch"; sourceTree = "<group>"; };
@@ -184,9 +186,8 @@
 		34E826B5F25A13D7715998275041E905 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				E2F136142764751900DD1186 /* HudViews */,
 				D667F8FDF775E8065026406BC61011C7 /* HudContainerView.swift */,
-				E254A0112759ECEC0034BE8D /* HudActivityIndicatorView.swift */,
-				E20911C027631E0100DFFC68 /* HudTextOnlyView.swift */,
 			);
 			name = UI;
 			path = DLProgressHUD/Classes/UI;
@@ -254,6 +255,16 @@
 				578452D2E740E91742655AC8F1636D1F /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E2F136142764751900DD1186 /* HudViews */ = {
+			isa = PBXGroup;
+			children = (
+				E254A0112759ECEC0034BE8D /* HudActivityIndicatorView.swift */,
+				E20911C027631E0100DFFC68 /* HudTextOnlyView.swift */,
+				E2F136152764754300DD1186 /* HudImageView.swift */,
+			);
+			path = HudViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -412,6 +423,7 @@
 				E08CF28F1F3E9AC220D66017775F51E8 /* DLProgressHUD.swift in Sources */,
 				3B147126D52A1D2938771522521C0CAC /* DLProgressHUD-dummy.m in Sources */,
 				AF64E3812E16A0EB5E8243597551AB60 /* HudConfigurationProtocol.swift in Sources */,
+				E2F136162764754300DD1186 /* HudImageView.swift in Sources */,
 				9A0775883F14446F32F90E3B200A9E50 /* HudContainerView.swift in Sources */,
 				E20911C127631E0100DFFC68 /* HudTextOnlyView.swift in Sources */,
 				E254A0122759ECEC0034BE8D /* HudActivityIndicatorView.swift in Sources */,
