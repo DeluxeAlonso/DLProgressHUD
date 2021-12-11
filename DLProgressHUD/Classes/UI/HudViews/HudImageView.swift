@@ -7,10 +7,11 @@
 
 import UIKit
 
-class HudImageView: UIView {
+final class HudImageView: UIView {
 
     private lazy var imageView: UIImageView = {
         let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
