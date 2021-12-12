@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HudTextOnlyView: UIView {
+final class HudTextOnlyView: UIView {
 
     private lazy var textLabel: UILabel = {
         let label = UILabel()

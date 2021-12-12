@@ -75,6 +75,8 @@ public extension DLProgressHUD {
         case loading
         case loadingWithText(_ text: String)
         case textOnly(_ text: String)
+        case image(_ image: UIImage)
+        case imageWithText(image: UIImage, text: String)
     }
 
 }

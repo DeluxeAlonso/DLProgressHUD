@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HudActivityIndicatorView: UIView {
+final class HudActivityIndicatorView: UIView {
 
     private lazy var stackView: UIStackView = {
         let stackView = UIStackView()
