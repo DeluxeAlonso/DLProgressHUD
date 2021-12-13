@@ -28,4 +28,8 @@ class ViewController: UIViewController {
         DLProgressHUD.show(.textOnly("Loading..."))
     }
 
+    @IBAction func showHUDWithImageAction(_ sender: Any) {
+        DLProgressHUD.show(.image(UIImage(named: "Check")!))
+    }
+
 }
