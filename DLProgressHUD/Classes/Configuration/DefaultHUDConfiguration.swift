@@ -21,10 +21,6 @@ public class DefaultHudConfiguration: HudConfigurationProtocol {
 
     public var activityIndicatorStyle: UIActivityIndicatorView.Style = .whiteLarge
 
-    public var textColor: UIColor = UIColor.black
-
-    public var textFont: UIFont = UIFont.boldSystemFont(ofSize: 24)
-
     public var hudContentPreferredWidth: CGFloat = 120.0
 
     public var hudContentPreferredHeight: CGFloat = 120.0
@@ -39,10 +35,10 @@ public class DefaultHudConfiguration: HudConfigurationProtocol {
 
     public var backgroundInteractionEnabled: Bool = false
 
-    public var descriptionTextFont: UIFont = .systemFont(ofSize: 16)
+    public var textFont: UIFont = .systemFont(ofSize: 16)
 
-    public var descriptionTextColor: UIColor = .black
+    public var textColor: UIColor = .black
 
-    public var descriptionTextNumberOfLines: Int = 0
+    public var textNumberOfLines: Int = 0
 
 }

@@ -14,9 +14,6 @@ public protocol HudConfigurationProtocol {
     var activityIndicatorColor: UIColor { get }
     var activityIndicatorStyle: UIActivityIndicatorView.Style { get }
 
-    var textColor: UIColor { get }
-    var textFont: UIFont { get }
-
     var hudContentPreferredWidth: CGFloat { get }
     var hudContentPreferredHeight: CGFloat { get }
 
@@ -29,9 +26,9 @@ public protocol HudConfigurationProtocol {
 
     var backgroundInteractionEnabled: Bool { get }
 
-    var descriptionTextFont: UIFont { get }
-    var descriptionTextColor: UIColor { get }
-    var descriptionTextNumberOfLines: Int { get }
+    var textFont: UIFont { get }
+    var textColor: UIColor { get }
+    var textNumberOfLines: Int { get }
 
 }
 
@@ -44,10 +41,6 @@ public extension HudConfigurationProtocol {
     var activityIndicatorColor: UIColor { UIColor.darkGray }
 
     var activityIndicatorStyle: UIActivityIndicatorView.Style { .whiteLarge }
-
-    var textColor: UIColor { UIColor.black }
-
-    var textFont: UIFont { UIFont.boldSystemFont(ofSize: 24) }
 
     var hudContentPreferredWidth: CGFloat { 120.0 }
 
@@ -63,10 +56,10 @@ public extension HudConfigurationProtocol {
 
     var backgroundInteractionEnabled: Bool { false }
 
-    var descriptionTextFont: UIFont { .systemFont(ofSize: 16) }
+    var textFont: UIFont { .systemFont(ofSize: 16) }
 
-    var descriptionTextColor: UIColor { .black }
+    var textColor: UIColor { .black }
 
-    var descriptionTextNumberOfLines: Int { 0 }
+    var textNumberOfLines: Int { 0 }
 
 }

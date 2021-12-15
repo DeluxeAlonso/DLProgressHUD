@@ -25,11 +25,20 @@ class ViewController: UIViewController {
     }
 
     @IBAction func showHUDWithTextOnlyAction(_ sender: Any) {
-        DLProgressHUD.show(.textOnly("Loading..."))
+        let configuration = HudTextOnlyConfiguration()
+        DLProgressHUD.show(.textOnly("Loading..."), configuration: configuration)
     }
 
     @IBAction func showHUDWithImageAction(_ sender: Any) {
         DLProgressHUD.show(.image(UIImage(named: "Check")!))
     }
+
+}
+
+struct HudTextOnlyConfiguration: HudConfigurationProtocol {
+
+    var hudContentPreferredHeight: CGFloat = 64
+    var hudContentPreferredWidth: CGFloat = 180
+    var textFont: UIFont = .systemFont(ofSize: 18.0)
 
 }
