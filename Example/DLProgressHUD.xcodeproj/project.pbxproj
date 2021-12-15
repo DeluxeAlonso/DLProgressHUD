@@ -15,6 +15,7 @@
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		998C2609C8281B5745613D89 /* Pods_DLProgressHUD_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9759EE2B3E753405CD925B0C /* Pods_DLProgressHUD_Tests.framework */; };
 		B46D7DC5007F31BBC477514A /* Pods_DLProgressHUD_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3426D28734C668DB6A12717 /* Pods_DLProgressHUD_Example.framework */; };
+		E285432A2769AF7F0033CDD7 /* HudTextOnlyConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28543292769AF7F0033CDD7 /* HudTextOnlyConfiguration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		A3426D28734C668DB6A12717 /* Pods_DLProgressHUD_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DLProgressHUD_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6FA763F4F13D9EB22CA74FA /* Pods-DLProgressHUD_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DLProgressHUD_Example.debug.xcconfig"; path = "Target Support Files/Pods-DLProgressHUD_Example/Pods-DLProgressHUD_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		D285ACBC60571BBC0AEEB3C4 /* Pods-DLProgressHUD_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DLProgressHUD_Tests.release.xcconfig"; path = "Target Support Files/Pods-DLProgressHUD_Tests/Pods-DLProgressHUD_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		E28543292769AF7F0033CDD7 /* HudTextOnlyConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HudTextOnlyConfiguration.swift; sourceTree = "<group>"; };
 		F7779BF95E552EC3B6F27520 /* Pods-DLProgressHUD_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DLProgressHUD_Tests.debug.xcconfig"; path = "Target Support Files/Pods-DLProgressHUD_Tests/Pods-DLProgressHUD_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,6 +115,7 @@
 		607FACD21AFB9204008FA782 /* Example for DLProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
+				E28543282769AF5D0033CDD7 /* CustomConfigurations */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
@@ -157,6 +160,14 @@
 				62C6844E6F4BED80EB26CDFD /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		E28543282769AF5D0033CDD7 /* CustomConfigurations */ = {
+			isa = PBXGroup;
+			children = (
+				E28543292769AF7F0033CDD7 /* HudTextOnlyConfiguration.swift */,
+			);
+			name = CustomConfigurations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,6 +343,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				E285432A2769AF7F0033CDD7 /* HudTextOnlyConfiguration.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

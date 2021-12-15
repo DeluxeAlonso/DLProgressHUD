@@ -25,7 +25,8 @@ class ViewController: UIViewController {
     }
 
     @IBAction func showHUDWithTextOnlyAction(_ sender: Any) {
-        DLProgressHUD.show(.textOnly("Loading..."))
+        let configuration = HudTextOnlyConfiguration()
+        DLProgressHUD.show(.textOnly("Loading..."), configuration: configuration)
     }
 
     @IBAction func showHUDWithImageAction(_ sender: Any) {
