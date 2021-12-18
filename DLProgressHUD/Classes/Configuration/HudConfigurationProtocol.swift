@@ -29,6 +29,7 @@ public protocol HudConfigurationProtocol {
     var textFont: UIFont { get }
     var textColor: UIColor { get }
     var textNumberOfLines: Int { get }
+    var textAlignment: NSTextAlignment { get }
 
 }
 
