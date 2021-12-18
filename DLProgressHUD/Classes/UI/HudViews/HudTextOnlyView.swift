@@ -12,7 +12,7 @@ final class HudTextOnlyView: UIView {
     private lazy var textLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = configuration.textNumberOfLines
-        label.textAlignment = .center
+        label.textAlignment = configuration.textAlignment
         label.font = configuration.textFont
         label.textColor = configuration.textColor
         label.setContentHuggingPriority(.required, for: .vertical)
