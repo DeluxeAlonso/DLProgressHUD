@@ -62,4 +62,6 @@ public extension HudConfigurationProtocol {
 
     var textNumberOfLines: Int { 0 }
 
+    var textAlignment: NSTextAlignment { .center }
+
 }
