@@ -55,7 +55,7 @@ public extension HudConfigurationProtocol {
 
     var presentationAnimationDelay: CGFloat { 0.0 }
 
-    var backgroundInteractionEnabled: Bool { false }
+    var backgroundInteractionEnabled: Bool { true }
 
     var textFont: UIFont { .systemFont(ofSize: 16) }
 
