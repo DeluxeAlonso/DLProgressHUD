@@ -29,6 +29,7 @@ public protocol HudConfigurationProtocol {
     var textFont: UIFont { get }
     var textColor: UIColor { get }
     var textNumberOfLines: Int { get }
+    var textAlignment: NSTextAlignment { get }
 
 }
 
@@ -54,12 +55,14 @@ public extension HudConfigurationProtocol {
 
     var presentationAnimationDelay: CGFloat { 0.0 }
 
-    var backgroundInteractionEnabled: Bool { false }
+    var backgroundInteractionEnabled: Bool { true }
 
     var textFont: UIFont { .systemFont(ofSize: 16) }
 
     var textColor: UIColor { .black }
 
     var textNumberOfLines: Int { 0 }
+
+    var textAlignment: NSTextAlignment { .center }
 
 }
