@@ -24,12 +24,14 @@ public class DLProgressHUD {
         guard let hudContainerView = hudContainerView else { return }
         hudContainerView.alpha = 0.0
         
-        let mainWindow = UIApplication.shared.keyWindow
-        mainWindow?.addSubview(hudContainerView)
-        NSLayoutConstraint.activate([hudContainerView.topAnchor.constraint(equalTo: mainWindow!.topAnchor),
-                                     hudContainerView.bottomAnchor.constraint(equalTo: mainWindow!.bottomAnchor),
-                                     hudContainerView.leadingAnchor.constraint(equalTo: mainWindow!.leadingAnchor),
-                                     hudContainerView.trailingAnchor.constraint(equalTo: mainWindow!.trailingAnchor)])
+        guard let mainWindow = UIApplication.shared.windows.first else {
+            return
+        }
+        mainWindow.addSubview(hudContainerView)
+        NSLayoutConstraint.activate([hudContainerView.topAnchor.constraint(equalTo: mainWindow.topAnchor),
+                                     hudContainerView.bottomAnchor.constraint(equalTo: mainWindow.bottomAnchor),
+                                     hudContainerView.leadingAnchor.constraint(equalTo: mainWindow.leadingAnchor),
+                                     hudContainerView.trailingAnchor.constraint(equalTo: mainWindow.trailingAnchor)])
         
         UIView.animate(withDuration: configuration.presentationAnimationDuration,
                        delay: configuration.presentationAnimationDelay,
