@@ -25,6 +25,7 @@ public class DLProgressHUD {
         hudContainerView.alpha = 0.0
         
         guard let mainWindow = UIApplication.shared.windows.first else {
+            assertionFailure("Main view should not be nil")
             return
         }
         mainWindow.addSubview(hudContainerView)
