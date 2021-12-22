@@ -29,10 +29,7 @@ public class DLProgressHUD {
             return
         }
         mainWindow.addSubview(hudContainerView)
-        NSLayoutConstraint.activate([hudContainerView.topAnchor.constraint(equalTo: mainWindow.topAnchor),
-                                     hudContainerView.bottomAnchor.constraint(equalTo: mainWindow.bottomAnchor),
-                                     hudContainerView.leadingAnchor.constraint(equalTo: mainWindow.leadingAnchor),
-                                     hudContainerView.trailingAnchor.constraint(equalTo: mainWindow.trailingAnchor)])
+        hudContainerView.fillSuperview()
         
         UIView.animate(withDuration: configuration.presentationAnimationDuration,
                        delay: configuration.presentationAnimationDelay,
