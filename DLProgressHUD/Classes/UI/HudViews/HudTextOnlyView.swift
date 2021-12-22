@@ -44,12 +44,7 @@ final class HudTextOnlyView: UIView {
 
     private func setupUI() {
         addSubview(textLabel)
-        NSLayoutConstraint.activate([
-            textLabel.topAnchor.constraint(equalTo: topAnchor, constant: 8),
-            textLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -8),
-            textLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
-            textLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8)
-        ])
+        textLabel.fillSuperview(padding: .init(top: 8, left: 8, bottom: 8, right: 8))
         textLabel.text = descriptionText
     }
 

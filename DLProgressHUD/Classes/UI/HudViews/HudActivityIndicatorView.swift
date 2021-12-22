@@ -85,12 +85,7 @@ final class HudActivityIndicatorView: UIView {
         if let descriptionText = descriptionText {
             let textLabelContainerView = UIView()
             textLabelContainerView.addSubview(textLabel)
-            NSLayoutConstraint.activate([
-                textLabel.topAnchor.constraint(equalTo: textLabelContainerView.topAnchor),
-                textLabel.bottomAnchor.constraint(equalTo: textLabelContainerView.bottomAnchor),
-                textLabel.leadingAnchor.constraint(equalTo: textLabelContainerView.leadingAnchor, constant: 8),
-                textLabel.trailingAnchor.constraint(equalTo: textLabelContainerView.trailingAnchor, constant: -8)
-            ])
+            textLabel.fillSuperview(padding: .init(top: 0, left: 8, bottom: 0, right: 8))
 
             stackView.addArrangedSubview(textLabelContainerView)
             textLabel.text = descriptionText
