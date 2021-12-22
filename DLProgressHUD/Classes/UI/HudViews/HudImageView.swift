@@ -72,12 +72,7 @@ final class HudImageView: UIView {
 
         let imageContainterView = UIView()
         imageContainterView.addSubview(imageView)
-        NSLayoutConstraint.activate([
-            imageView.topAnchor.constraint(equalTo: imageContainterView.topAnchor, constant: 8),
-            imageView.leadingAnchor.constraint(equalTo: imageContainterView.leadingAnchor, constant: 8),
-            imageView.trailingAnchor.constraint(equalTo: imageContainterView.trailingAnchor, constant: -8),
-            imageView.bottomAnchor.constraint(equalTo: imageContainterView.bottomAnchor, constant: -8),
-        ])
+        imageView.fillSuperview(padding: .init(top: 8, left: 8, bottom: 8, right: 8))
         imageView.image = hudImage
 
         stackView.addArrangedSubview(imageContainterView)

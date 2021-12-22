@@ -20,6 +20,7 @@
 		DA9389B2AC5B01195571B107D0C6B8DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		E08CF28F1F3E9AC220D66017775F51E8 /* DLProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2C32D6E517E6035DA2614DBCFD42A5 /* DLProgressHUD.swift */; };
 		E20911C127631E0100DFFC68 /* HudTextOnlyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20911C027631E0100DFFC68 /* HudTextOnlyView.swift */; };
+		E23660712772E02800768C0B /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23660702772E02800768C0B /* UIView+Layout.swift */; };
 		E254A0122759ECEC0034BE8D /* HudActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E254A0112759ECEC0034BE8D /* HudActivityIndicatorView.swift */; };
 		E2F136162764754300DD1186 /* HudImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F136152764754300DD1186 /* HudImageView.swift */; };
 		EE7DEFC9F6D6D7B1A8263C0D12EE32A9 /* Pods-DLProgressHUD_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A8E5097942CDE2CB84A8B7EFC929B9 /* Pods-DLProgressHUD_Example-dummy.m */; };
@@ -75,6 +76,7 @@
 		DBFD374EA3CF3C2BF283C916875BE36C /* Pods-DLProgressHUD_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DLProgressHUD_Tests-Info.plist"; sourceTree = "<group>"; };
 		DC5899AC831B63DC98A2D585F0E8A16F /* DLProgressHUD.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = DLProgressHUD.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		E20911C027631E0100DFFC68 /* HudTextOnlyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HudTextOnlyView.swift; sourceTree = "<group>"; };
+		E23660702772E02800768C0B /* UIView+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
 		E254A0112759ECEC0034BE8D /* HudActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HudActivityIndicatorView.swift; sourceTree = "<group>"; };
 		E2F136152764754300DD1186 /* HudImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HudImageView.swift; sourceTree = "<group>"; };
 		E4B583A9E1A04E20BB177752E08C8202 /* Pods-DLProgressHUD_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DLProgressHUD_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 		34E826B5F25A13D7715998275041E905 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				E236606F2772DF7900768C0B /* Extensions */,
 				E2F136142764751900DD1186 /* HudViews */,
 				D667F8FDF775E8065026406BC61011C7 /* HudContainerView.swift */,
 			);
@@ -255,6 +258,14 @@
 				578452D2E740E91742655AC8F1636D1F /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E236606F2772DF7900768C0B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E23660702772E02800768C0B /* UIView+Layout.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		E2F136142764751900DD1186 /* HudViews */ = {
@@ -424,6 +435,7 @@
 				3B147126D52A1D2938771522521C0CAC /* DLProgressHUD-dummy.m in Sources */,
 				AF64E3812E16A0EB5E8243597551AB60 /* HudConfigurationProtocol.swift in Sources */,
 				E2F136162764754300DD1186 /* HudImageView.swift in Sources */,
+				E23660712772E02800768C0B /* UIView+Layout.swift in Sources */,
 				9A0775883F14446F32F90E3B200A9E50 /* HudContainerView.swift in Sources */,
 				E20911C127631E0100DFFC68 /* HudTextOnlyView.swift in Sources */,
 				E254A0122759ECEC0034BE8D /* HudActivityIndicatorView.swift in Sources */,
