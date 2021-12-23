@@ -63,12 +63,11 @@ final class HudImageView: UIView {
 
     private func setupUI() {
         addSubview(stackView)
+        stackView.centerInSuperview()
         NSLayoutConstraint.activate([stackView.topAnchor.constraint(greaterThanOrEqualTo: topAnchor),
                                      stackView.bottomAnchor.constraint(lessThanOrEqualTo: bottomAnchor),
                                      stackView.leadingAnchor.constraint(greaterThanOrEqualTo: leadingAnchor),
-                                     stackView.trailingAnchor.constraint(greaterThanOrEqualTo: trailingAnchor),
-                                     stackView.centerYAnchor.constraint(equalTo: centerYAnchor),
-                                     stackView.centerXAnchor.constraint(equalTo: centerXAnchor)])
+                                     stackView.trailingAnchor.constraint(greaterThanOrEqualTo: trailingAnchor)])
 
         let imageContainterView = UIView()
         imageContainterView.addSubview(imageView)
