@@ -13,14 +13,15 @@ final class HudImageView: UIView {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.distribution = .fillProportionally
-        stackView.spacing = 12
+        stackView.spacing = 4
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
 
     private lazy var imageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFill
+        imageView.contentMode = .scaleAspectFit
+        imageView.clipsToBounds = true
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
@@ -71,19 +72,21 @@ final class HudImageView: UIView {
 
         let imageContainterView = UIView()
         imageContainterView.addSubview(imageView)
-        imageView.fillSuperview(padding: .init(top: 8, left: 8, bottom: 8, right: 8))
+        imageView.centerInSuperview()
+        NSLayoutConstraint.activate([
+            imageView.topAnchor.constraint(greaterThanOrEqualTo: imageContainterView.topAnchor),
+            imageView.bottomAnchor.constraint(lessThanOrEqualTo: imageContainterView.bottomAnchor),
+            imageView.leadingAnchor.constraint(equalTo: imageContainterView.leadingAnchor),
+            imageView.trailingAnchor.constraint(equalTo: imageContainterView.trailingAnchor),
+            imageView.heightAnchor.constraint(equalToConstant: 72)
+        ])
         imageView.image = hudImage
 
         stackView.addArrangedSubview(imageContainterView)
         if let descriptionText = descriptionText {
             let textLabelContainerView = UIView()
             textLabelContainerView.addSubview(textLabel)
-            NSLayoutConstraint.activate([
-                textLabel.topAnchor.constraint(equalTo: textLabelContainerView.topAnchor),
-                textLabel.bottomAnchor.constraint(equalTo: textLabelContainerView.bottomAnchor),
-                textLabel.leadingAnchor.constraint(equalTo: textLabelContainerView.leadingAnchor, constant: 8),
-                textLabel.trailingAnchor.constraint(equalTo: textLabelContainerView.trailingAnchor, constant: -8)
-            ])
+            textLabel.fillSuperview(padding: .init(top: 0, left: 8, bottom: 0, right: 8))
 
             stackView.addArrangedSubview(textLabelContainerView)
             textLabel.text = descriptionText
