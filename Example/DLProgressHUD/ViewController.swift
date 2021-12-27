@@ -33,4 +33,8 @@ class ViewController: UIViewController {
         DLProgressHUD.show(.image(UIImage(named: "Check")!))
     }
 
+    @IBAction func showHUDWithImageAndTextAction(_ sender: Any) {
+        DLProgressHUD.show(.imageWithText(image: UIImage(named: "Check")!, text: "Success!"))
+    }
+
 }
