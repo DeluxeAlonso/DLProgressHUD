@@ -74,11 +74,11 @@ final class HudImageView: UIView {
         imageContainterView.addSubview(imageView)
         imageView.centerInSuperview()
         NSLayoutConstraint.activate([
-            imageView.topAnchor.constraint(equalTo: imageContainterView.topAnchor),
-            imageView.bottomAnchor.constraint(equalTo: imageContainterView.bottomAnchor),
+            imageView.topAnchor.constraint(greaterThanOrEqualTo: imageContainterView.topAnchor),
+            imageView.bottomAnchor.constraint(lessThanOrEqualTo: imageContainterView.bottomAnchor),
             imageView.leadingAnchor.constraint(equalTo: imageContainterView.leadingAnchor),
             imageView.trailingAnchor.constraint(equalTo: imageContainterView.trailingAnchor),
-            imageView.heightAnchor.constraint(equalToConstant: 72),
+            imageView.heightAnchor.constraint(equalToConstant: 72)
         ])
         imageView.image = hudImage
 
