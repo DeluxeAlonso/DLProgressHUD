@@ -66,8 +66,8 @@ final class HudActivityIndicatorView: UIView {
         stackView.centerInSuperview()
         NSLayoutConstraint.activate([stackView.topAnchor.constraint(greaterThanOrEqualTo: topAnchor),
                                      stackView.bottomAnchor.constraint(lessThanOrEqualTo: bottomAnchor),
-                                     stackView.leadingAnchor.constraint(greaterThanOrEqualTo: leadingAnchor),
-                                     stackView.trailingAnchor.constraint(greaterThanOrEqualTo: trailingAnchor)])
+                                     stackView.leadingAnchor.constraint(equalTo: leadingAnchor),
+                                     stackView.trailingAnchor.constraint(equalTo: trailingAnchor)])
 
         let activityIndicatorContainerView = UIView()
         activityIndicatorContainerView.addSubview(activityIndicatorView)
