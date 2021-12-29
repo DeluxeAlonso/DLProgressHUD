@@ -67,4 +67,6 @@ public extension HudConfigurationProtocol {
 
     var textAlignment: NSTextAlignment { .center }
 
+    var hudImageHeight: CGFloat { 72 }
+
 }
