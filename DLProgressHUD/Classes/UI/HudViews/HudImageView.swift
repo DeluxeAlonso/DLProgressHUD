@@ -78,7 +78,7 @@ final class HudImageView: UIView {
             imageView.bottomAnchor.constraint(lessThanOrEqualTo: imageContainterView.bottomAnchor),
             imageView.leadingAnchor.constraint(equalTo: imageContainterView.leadingAnchor),
             imageView.trailingAnchor.constraint(equalTo: imageContainterView.trailingAnchor),
-            imageView.heightAnchor.constraint(equalToConstant: 72)
+            imageView.heightAnchor.constraint(equalToConstant: configuration.hudImageHeight)
         ])
         imageView.image = hudImage
 
