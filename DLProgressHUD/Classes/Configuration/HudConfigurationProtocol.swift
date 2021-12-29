@@ -31,6 +31,8 @@ public protocol HudConfigurationProtocol {
     var textNumberOfLines: Int { get }
     var textAlignment: NSTextAlignment { get }
 
+    var hudImageHeight: CGFloat { get }
+
 }
 
 public extension HudConfigurationProtocol {
