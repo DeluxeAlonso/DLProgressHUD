@@ -76,7 +76,7 @@ final class HudActivityIndicatorView: UIView {
             activityIndicatorView.topAnchor.constraint(greaterThanOrEqualTo: activityIndicatorContainerView.topAnchor),
             activityIndicatorView.bottomAnchor.constraint(lessThanOrEqualTo: activityIndicatorContainerView.bottomAnchor),
             activityIndicatorView.leadingAnchor.constraint(greaterThanOrEqualTo: activityIndicatorContainerView.leadingAnchor),
-            activityIndicatorView.trailingAnchor.constraint(lessThanOrEqualTo: activityIndicatorContainerView.trailingAnchor),
+            activityIndicatorView.trailingAnchor.constraint(lessThanOrEqualTo: activityIndicatorContainerView.trailingAnchor)
         ])
 
         stackView.addArrangedSubview(activityIndicatorContainerView)
