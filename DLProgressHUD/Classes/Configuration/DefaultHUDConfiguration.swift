@@ -41,4 +41,6 @@ public class DefaultHudConfiguration: HudConfigurationProtocol {
 
     public var textNumberOfLines: Int = 0
 
+    public var hudImageHeight: CGFloat = 72
+
 }
