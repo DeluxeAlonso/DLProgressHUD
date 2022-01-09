@@ -1,22 +1,22 @@
 {
   "name": "DLProgressHUD",
   "version": "0.1.0",
-  "summary": "A short description of DLProgressHUD.",
-  "description": "TODO: Add long description of the pod here.",
+  "summary": "Lightweight Progress HUD implementation for iOS.",
+  "description": "Lightweight and highly configurable Progress HUD implementation for iOS.",
   "homepage": "https://github.com/DeluxeAlonso/DLProgressHUD",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "DeluxeAlonso": "alonso.alvarez@pucp.pe"
+    "DeluxeAlonso": "alonso.alvarez.dev@gmail.com"
   },
   "source": {
     "git": "https://github.com/DeluxeAlonso/DLProgressHUD.git",
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "9.0"
+    "ios": "12.0"
   },
-  "source_files": "DLProgressHUD/Classes/**/*"
+  "source_files": "DLProgressHUD/Classes/**/*.swift"
 }
