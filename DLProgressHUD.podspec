@@ -9,34 +9,19 @@
 Pod::Spec.new do |s|
   s.name             = 'DLProgressHUD'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of DLProgressHUD.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
+  s.summary          = 'Lightweight Progress HUD implementation for iOS.'
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+Lightweight and highly configurable Progress HUD implementation for iOS.
                        DESC
 
   s.homepage         = 'https://github.com/DeluxeAlonso/DLProgressHUD'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'DeluxeAlonso' => 'alonso.alvarez@pucp.pe' }
+  s.author           = { 'DeluxeAlonso' => 'alonso.alvarez.dev@gmail.com' }
   s.source           = { :git => 'https://github.com/DeluxeAlonso/DLProgressHUD.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '12.0'
 
-  s.source_files = 'DLProgressHUD/Classes/**/*'
+  s.source_files = 'DLProgressHUD/Classes/**/*.swift'
   
-  # s.resource_bundles = {
-  #   'DLProgressHUD' => ['DLProgressHUD/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end
