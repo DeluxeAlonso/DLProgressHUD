@@ -11,7 +11,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
-DLProgressHUD requires iOS 12.0 and Swift 4.0 or above.
+DLProgressHUD requires iOS 12.0 and Swift 5.0 or above.
 
 ## Installation
 
