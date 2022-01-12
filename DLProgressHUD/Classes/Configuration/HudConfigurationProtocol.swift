@@ -41,9 +41,11 @@ public protocol HudConfigurationProtocol {
     var automaticDismissAnimationDuration: CGFloat { get }
 
     /// Available only for *textOnly* mode.
-    var allowsDynamicWidth: Bool { get }
-    /// Available only for *textOnly* mode. It will only have an effect if *allowsDynamicWidth* is set to true.
-    var horizontalDynamicMargins: CGFloat { get }
+    var allowsDynamicTextWidth: Bool { get }
+    /// Available only for *textOnly* mode. It will only have an effect if *allowsDynamicTextWidth* is set to true.
+    var horizontalDynamicTextMargin: CGFloat { get }
+    /// Available only for *textOnly* mode. It will only have an effect if *allowsDynamicTextWidth* is set to true.
+    var horizontalDynamicTextPadding: CGFloat { get }
 
 }
 
@@ -87,8 +89,10 @@ public extension HudConfigurationProtocol {
 
     var automaticDismissAnimationDuration: CGFloat { 0.5 }
 
-    var allowsDynamicWidth: Bool { false }
+    var allowsDynamicTextWidth: Bool { false }
 
-    var horizontalDynamicMargins: CGFloat { 32.0 }
+    var horizontalDynamicTextMargin: CGFloat { 32.0 }
+
+    var horizontalDynamicTextPadding: CGFloat { 24.0 }
 
 }

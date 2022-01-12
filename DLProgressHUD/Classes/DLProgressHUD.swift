@@ -90,7 +90,7 @@ public extension DLProgressHUD {
 
 public extension DLProgressHUD {
 
-    enum Mode {
+    enum Mode: Equatable {
         case loading
         case loadingWithText(_ text: String)
         case textOnly(_ text: String)
