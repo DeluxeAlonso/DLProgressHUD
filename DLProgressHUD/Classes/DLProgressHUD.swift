@@ -34,6 +34,12 @@ public class DLProgressHUD {
         }, completion: { completed in
             completion?(completed)
         })
+
+        if configuration.shouldDismissAutomatically {
+            DispatchQueue.main.asyncAfter(deadline: .now() + configuration.presentationDuration) {
+                self.dismiss(with: configuration.automaticDismissAnimationDuration)
+            }
+        }
     }
 
     private func dismiss(with animationDuration: TimeInterval = 0.0) {

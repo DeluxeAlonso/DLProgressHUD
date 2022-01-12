@@ -47,4 +47,6 @@ public class DefaultHudConfiguration: HudConfigurationProtocol {
 
     public var presentationDuration: TimeInterval = 3.0
 
+    public var automaticDismissAnimationDuration: CGFloat = 0.5
+
 }
