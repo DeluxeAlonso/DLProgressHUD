@@ -33,6 +33,11 @@ public protocol HudConfigurationProtocol {
 
     var hudImageHeight: CGFloat { get }
 
+    var shouldDismissAutomatically: Bool { get }
+
+    /// Presentation duration of the progress HUD. It will only have an effect if *shouldDismissAutomatically* is set to true.
+    var presentationDuration: TimeInterval { get }
+
 }
 
 public extension HudConfigurationProtocol {
@@ -68,5 +73,10 @@ public extension HudConfigurationProtocol {
     var textAlignment: NSTextAlignment { .center }
 
     var hudImageHeight: CGFloat { 72 }
+
+    var shouldDismissAutomatically: Bool { false }
+
+    /// Presentation duration of the progress HUD. It will only have an effect if *shouldDismissAutomatically* is set to true.
+    var presentationDuration: TimeInterval { 3.0 }
 
 }

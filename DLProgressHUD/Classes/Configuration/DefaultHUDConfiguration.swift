@@ -43,4 +43,8 @@ public class DefaultHudConfiguration: HudConfigurationProtocol {
 
     public var hudImageHeight: CGFloat = 72
 
+    public var shouldDismissAutomatically: Bool = false
+
+    public var presentationDuration: TimeInterval = 3.0
+
 }
