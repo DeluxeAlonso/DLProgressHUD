@@ -14,5 +14,6 @@ struct HudTextOnlyConfiguration: HudConfigurationProtocol {
     var hudContentPreferredHeight: CGFloat = 64
     var hudContentPreferredWidth: CGFloat = 180
     var textFont: UIFont = .systemFont(ofSize: 18.0)
+    var allowsDynamicWidth: Bool = false
 
 }

@@ -49,4 +49,8 @@ public class DefaultHudConfiguration: HudConfigurationProtocol {
 
     public var automaticDismissAnimationDuration: CGFloat = 0.5
 
+    public var allowsDynamicWidth: Bool = false
+
+    public var horizontalDynamicMargins: CGFloat = 32.0
+
 }
