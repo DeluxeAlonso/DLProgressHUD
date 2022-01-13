@@ -43,4 +43,16 @@ public class DefaultHudConfiguration: HudConfigurationProtocol {
 
     public var hudImageHeight: CGFloat = 72
 
+    public var shouldDismissAutomatically: Bool = false
+
+    public var presentationDuration: TimeInterval = 3.0
+
+    public var automaticDismissAnimationDuration: CGFloat = 0.5
+
+    public var allowsDynamicTextWidth: Bool = false
+
+    public var horizontalDynamicMargin: CGFloat = 32.0
+
+    public var horizontalDynamicTextPadding: CGFloat = 24.0
+
 }

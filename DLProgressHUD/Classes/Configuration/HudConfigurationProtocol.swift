@@ -33,6 +33,20 @@ public protocol HudConfigurationProtocol {
 
     var hudImageHeight: CGFloat { get }
 
+    var shouldDismissAutomatically: Bool { get }
+
+    /// Presentation duration of the progress HUD. It will only have an effect if *shouldDismissAutomatically* is set to true.
+    var presentationDuration: TimeInterval { get }
+    /// Automatic dismiss animation duration of the progress HUD. It will only have an effect if *shouldDismissAutomatically* is set to true.
+    var automaticDismissAnimationDuration: CGFloat { get }
+
+    /// Available only for *textOnly* mode.
+    var allowsDynamicTextWidth: Bool { get }
+    /// Available only for *textOnly* mode. It will only have an effect if *allowsDynamicTextWidth* is set to true.
+    var horizontalDynamicTextMargin: CGFloat { get }
+    /// Available only for *textOnly* mode. It will only have an effect if *allowsDynamicTextWidth* is set to true.
+    var horizontalDynamicTextPadding: CGFloat { get }
+
 }
 
 public extension HudConfigurationProtocol {
@@ -68,5 +82,17 @@ public extension HudConfigurationProtocol {
     var textAlignment: NSTextAlignment { .center }
 
     var hudImageHeight: CGFloat { 72 }
+
+    var shouldDismissAutomatically: Bool { false }
+
+    var presentationDuration: TimeInterval { 3.0 }
+
+    var automaticDismissAnimationDuration: CGFloat { 0.5 }
+
+    var allowsDynamicTextWidth: Bool { false }
+
+    var horizontalDynamicTextMargin: CGFloat { 32.0 }
+
+    var horizontalDynamicTextPadding: CGFloat { 24.0 }
 
 }

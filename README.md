@@ -22,6 +22,16 @@ it, simply add the following line to your Podfile:
 pod 'DLProgressHUD'
 ```
 
+## Usage
+
+There are five modes that can be used to show the progress HUD: loading, loadingWithText, textOnly, image and imageWithText.
+
+You just need to call the show method and pass the mode as a parameter:
+
+```swift
+DLProgressHUD.show(.loading)
+```
+
 ## Author
 
 DeluxeAlonso, alonso.alvarez.dev@gmail.com

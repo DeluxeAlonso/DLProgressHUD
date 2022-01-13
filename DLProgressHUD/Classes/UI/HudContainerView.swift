@@ -49,8 +49,17 @@ class HudContainerView: UIView {
         addSubview(hudContentView)
         NSLayoutConstraint.activate([hudContentView.centerXAnchor.constraint(equalTo: centerXAnchor),
                                      hudContentView.centerYAnchor.constraint(equalTo: centerYAnchor),
-                                     hudContentView.heightAnchor.constraint(equalToConstant: configuration.hudContentPreferredHeight),
-                                     hudContentView.widthAnchor.constraint(equalToConstant: configuration.hudContentPreferredWidth)])
+                                     hudContentView.heightAnchor.constraint(equalToConstant: configuration.hudContentPreferredHeight)])
+        switch hudMode {
+        case .textOnly:
+            if configuration.allowsDynamicTextWidth {
+                hudContentView.horizontalMarginInSuperview(margin: configuration.horizontalDynamicTextMargin)
+            } else {
+                fallthrough
+            }
+        case .loading, .imageWithText, .image, .loadingWithText:
+            hudContentView.constraintWidth(constant: configuration.hudContentPreferredWidth)
+        }
 
         let contentView = makeContentView(for: hudMode)
         contentView.translatesAutoresizingMaskIntoConstraints = false
