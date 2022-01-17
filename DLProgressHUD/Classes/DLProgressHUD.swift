@@ -12,6 +12,7 @@ public class DLProgressHUD {
     private static let shared = DLProgressHUD()
     
     private var hudContainerView: HudContainerView?
+    private var presentationTimer: Timer?
     
     init() {}
 
@@ -36,8 +37,8 @@ public class DLProgressHUD {
         })
 
         if configuration.shouldDismissAutomatically {
-            DispatchQueue.main.asyncAfter(deadline: .now() + configuration.presentationDuration) {
-                self.dismiss(with: configuration.automaticDismissAnimationDuration)
+            presentationTimer = Timer.scheduledTimer(withTimeInterval: configuration.presentationDuration, repeats: false) { [weak self] _ in
+                self?.dismiss(with: configuration.automaticDismissAnimationDuration)
             }
         }
     }
@@ -49,6 +50,8 @@ public class DLProgressHUD {
         }, completion: { _ in
             self.hudContainerView?.removeFromSuperview()
             self.hudContainerView = nil
+            self.presentationTimer?.invalidate()
+            self.presentationTimer = nil
         })
     }
 
@@ -56,6 +59,8 @@ public class DLProgressHUD {
         hudContainerView?.isHidden = true
         hudContainerView?.removeFromSuperview()
         hudContainerView = nil
+        presentationTimer?.invalidate()
+        presentationTimer = nil
     }
 
 }
