@@ -11,8 +11,8 @@ public protocol HudConfigurationProtocol {
 
     /// Background color of the view behind the HUD.
     var backgroundColor: UIColor { get }
-    /// HUD container color.
-    var hudColor: UIColor { get }
+    /// HUD content color.
+    var hudContentColor: UIColor { get }
 
     /// The color of the activity indicator. If you set a color for an activity indicator, it overrides the color provided by the *activityIndicatorStyle* property.
     var activityIndicatorColor: UIColor { get }
@@ -60,7 +60,7 @@ public extension HudConfigurationProtocol {
 
     var backgroundColor: UIColor { .clear }
 
-    var hudColor: UIColor { UIColor(white: 0.8, alpha: 0.36) }
+    var hudContentColor: UIColor { UIColor(white: 0.8, alpha: 0.36) }
 
     var activityIndicatorColor: UIColor { UIColor.darkGray }
 
