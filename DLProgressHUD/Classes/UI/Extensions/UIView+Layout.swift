@@ -20,6 +20,15 @@ extension UIView {
         ])
     }
 
+    func horizontalMarginInSuperview(margin: CGFloat) {
+        guard let superview = superview else { return }
+        translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            leadingAnchor.constraint(greaterThanOrEqualTo: superview.leadingAnchor, constant: margin),
+            trailingAnchor.constraint(lessThanOrEqualTo: superview.trailingAnchor, constant: -margin)
+        ])
+    }
+
     func centerInSuperview(size: CGSize = .zero) {
         guard let superview = superview else { return }
         translatesAutoresizingMaskIntoConstraints = false

@@ -15,7 +15,7 @@ public class DefaultHudConfiguration: HudConfigurationProtocol {
 
     public var backgroundColor: UIColor = .clear
 
-    public var hudColor: UIColor = UIColor(white: 0.8, alpha: 0.36)
+    public var hudContentColor: UIColor = UIColor(white: 0.8, alpha: 0.36)
 
     public var activityIndicatorColor: UIColor = UIColor.darkGray
 
@@ -42,5 +42,17 @@ public class DefaultHudConfiguration: HudConfigurationProtocol {
     public var textNumberOfLines: Int = 0
 
     public var hudImageHeight: CGFloat = 72
+
+    public var shouldDismissAutomatically: Bool = false
+
+    public var presentationDuration: TimeInterval = 3.0
+
+    public var automaticDismissAnimationDuration: CGFloat = 0.5
+
+    public var allowsDynamicTextWidth: Bool = false
+
+    public var horizontalDynamicMargin: CGFloat = 32.0
+
+    public var horizontalDynamicTextPadding: CGFloat = 24.0
 
 }
