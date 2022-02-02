@@ -9,9 +9,9 @@ import UIKit
 
 public protocol HudConfigurationProtocol {
 
-    /// Background color of the view behind the HUD.
+    /// The background color of the view behind the HUD.
     var backgroundColor: UIColor { get }
-    /// HUD content color.
+    /// The HUD content view color.
     var hudContentColor: UIColor { get }
 
     /// The color of the activity indicator. If you set a color for an activity indicator, it overrides the color provided by the *activityIndicatorStyle* property.
@@ -19,24 +19,35 @@ public protocol HudConfigurationProtocol {
     /// The basic appearance of the activity indicator.
     var activityIndicatorStyle: UIActivityIndicatorView.Style { get }
 
+    /// The preferred width of the HUD content view.
     var hudContentPreferredWidth: CGFloat { get }
+    /// The preferred height of the HUD conten viewt.
     var hudContentPreferredHeight: CGFloat { get }
 
+    /// The radius to use when drawing rounded corners for the layer’s background of the HUD content view.
     var hudContentCornerRadius: CGFloat { get }
 
+    /// The intensity of the blur effect in the HUD content view..
     var hudContentVisualEffectBlurStyle: UIBlurEffect.Style { get }
 
+    /// The total duration of the HUD presentation animation, measured in seconds. If you specify a negative value or 0, the changes are made without animating them.
     var presentationAnimationDuration: CGFloat { get }
+    /// The amount of time (measured in seconds) to wait before beginning the HUD presentation animation. Specify a value of 0 to begin the animations immediately.
     var presentationAnimationDelay: CGFloat { get }
 
     /// If set to true, user can interact with the whole screen as long as the HUD is being presented.
     var backgroundInteractionEnabled: Bool { get }
 
+    /// The font of the HUD text.
     var textFont: UIFont { get }
+    /// The color of the HUD text.
     var textColor: UIColor { get }
+    /// The maximum number of lines for rendering the HUD text.
     var textNumberOfLines: Int { get }
+    /// The technique for aligning the HUD text.
     var textAlignment: NSTextAlignment { get }
 
+    /// The height of the HUD image.
     var hudImageHeight: CGFloat { get }
 
     /// If set to true HUD gets automatically dismissed after the  elapsed time defined by *presentationDuration* is over.
