@@ -43,7 +43,7 @@ class HudContainerView: UIView {
 
         backgroundColor = configuration.backgroundColor
 
-        hudContentView.backgroundColor = configuration.hudColor
+        hudContentView.backgroundColor = configuration.hudContentColor
         hudContentView.layer.cornerRadius = configuration.hudContentCornerRadius
 
         addSubview(hudContentView)
