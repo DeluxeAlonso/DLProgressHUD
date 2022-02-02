@@ -32,9 +32,13 @@ public protocol HudConfigurationProtocol {
     /// If set to true, user can interact with the whole screen as long as the HUD is being presented.
     var backgroundInteractionEnabled: Bool { get }
 
+    /// The font of the HUD text.
     var textFont: UIFont { get }
+    /// The color of the HUD text.
     var textColor: UIColor { get }
+    /// The maximum number of lines for rendering the HUD text.
     var textNumberOfLines: Int { get }
+    /// The technique for aligning the HUD text.
     var textAlignment: NSTextAlignment { get }
 
     var hudImageHeight: CGFloat { get }
