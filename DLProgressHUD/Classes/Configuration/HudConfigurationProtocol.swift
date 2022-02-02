@@ -26,7 +26,9 @@ public protocol HudConfigurationProtocol {
 
     var hudContentVisualEffectBlurStyle: UIBlurEffect.Style { get }
 
+    /// The total duration of the HUD presentation animation, measured in seconds. If you specify a negative value or 0, the changes are made without animating them.
     var presentationAnimationDuration: CGFloat { get }
+    /// The amount of time (measured in seconds) to wait before beginning the HUD presentation animation. Specify a value of 0 to begin the animations immediately.
     var presentationAnimationDelay: CGFloat { get }
 
     /// If set to true, user can interact with the whole screen as long as the HUD is being presented.
@@ -41,6 +43,7 @@ public protocol HudConfigurationProtocol {
     /// The technique for aligning the HUD text.
     var textAlignment: NSTextAlignment { get }
 
+    /// The height of the HUD image.
     var hudImageHeight: CGFloat { get }
 
     /// If set to true HUD gets automatically dismissed after the  elapsed time defined by *presentationDuration* is over.
