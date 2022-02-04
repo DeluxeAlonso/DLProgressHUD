@@ -94,10 +94,15 @@ public extension DLProgressHUD {
 public extension DLProgressHUD {
 
     enum Mode: Equatable {
+        /// HUD with an activity indicator only.
         case loading
+        /// HUD with an activity indicator and a text label below it.
         case loadingWithText(_ text: String)
+        /// HUD with a text label only.
         case textOnly(_ text: String)
+        /// HUD with an image view only.
         case image(_ image: UIImage)
+        /// HUD with an image view and a text label below it.
         case imageWithText(image: UIImage, text: String)
     }
 
