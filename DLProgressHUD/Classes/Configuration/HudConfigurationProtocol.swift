@@ -21,13 +21,13 @@ public protocol HudConfigurationProtocol {
 
     /// The preferred width of the HUD content view.
     var hudContentPreferredWidth: CGFloat { get }
-    /// The preferred height of the HUD conten viewt.
+    /// The preferred height of the HUD conten view.
     var hudContentPreferredHeight: CGFloat { get }
 
     /// The radius to use when drawing rounded corners for the layer’s background of the HUD content view.
     var hudContentCornerRadius: CGFloat { get }
 
-    /// The intensity of the blur effect in the HUD content view..
+    /// The intensity of the blur effect in the HUD content view.
     var hudContentVisualEffectBlurStyle: UIBlurEffect.Style { get }
 
     /// The total duration of the HUD presentation animation, measured in seconds. If you specify a negative value or 0, the changes are made without animating them.
