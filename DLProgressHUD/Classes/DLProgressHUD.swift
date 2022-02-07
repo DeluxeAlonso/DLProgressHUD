@@ -13,7 +13,7 @@ public class DLProgressHUD {
     
     private var hudContainerView: HudContainerView?
     
-    init() {}
+    public init() {}
     
     private func show(with configuration: HudConfigurationProtocol, and mode: Mode, completion: ((Bool) -> Void)?) {
         // If hud is already being shown we dismiss it.
