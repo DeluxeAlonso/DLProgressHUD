@@ -15,7 +15,7 @@ public class DLProgressHUD {
     
     public init() {}
     
-    private func show(with configuration: HudConfigurationProtocol, and mode: Mode, completion: ((Bool) -> Void)?) {
+    public func show(with configuration: HudConfigurationProtocol, and mode: Mode, completion: ((Bool) -> Void)?) {
         // If hud is already being shown we dismiss it.
         if hudContainerView != nil { dismissWithoutAnimation() }
 
@@ -40,7 +40,7 @@ public class DLProgressHUD {
         })
     }
 
-    private func dismiss(with animationDuration: TimeInterval = 0.0) {
+    public func dismiss(with animationDuration: TimeInterval = 0.0) {
         guard hudContainerView != nil else { return }
         UIView.animate(withDuration: animationDuration, delay: 0.0, options: [.curveEaseOut], animations: {
             self.hudContainerView?.alpha = 0.0
