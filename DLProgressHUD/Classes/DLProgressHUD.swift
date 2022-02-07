@@ -42,6 +42,10 @@ public class DLProgressHUD {
 
     public func dismiss(with animationDuration: TimeInterval = 0.0) {
         guard hudContainerView != nil else { return }
+        guard animationDuration != 0.0 else {
+            dismissWithoutAnimation()
+            return
+        }
         UIView.animate(withDuration: animationDuration, delay: 0.0, options: [.curveEaseOut], animations: {
             self.hudContainerView?.alpha = 0.0
         }, completion: { _ in
