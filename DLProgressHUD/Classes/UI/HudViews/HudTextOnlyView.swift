@@ -44,7 +44,9 @@ final class HudTextOnlyView: UIView {
 
     private func setupUI() {
         addSubview(textLabel)
-        textLabel.fillSuperview(padding: .init(top: 8, left: 8, bottom: 8, right: 8))
+        let allowsDynamicTextWidth = configuration.allowsDynamicTextWidth
+        let horizontalPadding = allowsDynamicTextWidth ? configuration.horizontalDynamicTextPadding : 8
+        textLabel.fillSuperview(padding: .init(top: 8, left: horizontalPadding, bottom: 8, right: horizontalPadding))
         textLabel.text = descriptionText
     }
 
