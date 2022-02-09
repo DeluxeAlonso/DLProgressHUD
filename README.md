@@ -32,6 +32,32 @@ You just need to call the show method and pass the mode as a parameter:
 DLProgressHUD.show(.loading)
 ```
 
+## Appearance and presentation configuration
+
+There are two ways to configure the appearance and presentation of `DLAutoSlidePageViewController`:
+
+1) You can do it globally using the `DefaultHudConfiguration` class before instantiation.
+
+```swift
+DLProgressHUD.defaultConfiguration.backgroundInteractionEnabled = true
+DLProgressHUD.show(.loading)
+```
+
+2) You can create your own configuration instance that conforms to `HudConfigurationProtocol` protocol and pass it on `DLProgressHUD`'s methods.
+
+```swift
+struct HudCustomConfiguration: HudConfigurationProtocol {
+    var hudContentPreferredHeight: CGFloat = 64
+    var hudContentPreferredWidth: CGFloat = 180
+    var textFont: UIFont = .systemFont(ofSize: 18.0)
+}
+```
+
+```swift
+let configuration = HudTextOnlyConfiguration()
+DLProgressHUD.show(.textOnly("Loading..."), configuration: configuration)
+```
+
 ## Author
 
 DeluxeAlonso, alonso.alvarez.dev@gmail.com
