@@ -5,8 +5,6 @@
 //  Created by Alonso on 27/11/21.
 //
 
-import Foundation
-
 public class DLProgressHUD {
     
     private static let shared = DLProgressHUD()
