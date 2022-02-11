@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'DLProgressHUD'
-  s.version          = '0.1.6'
+  s.version          = '0.1.7'
   s.summary          = 'Lightweight Progress HUD implementation for iOS.'
 
   s.description      = <<-DESC
