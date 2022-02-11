@@ -26,11 +26,21 @@ pod 'DLProgressHUD'
 
 There are five modes that can be used to show the progress HUD: loading, loadingWithText, textOnly, image and imageWithText.
 
-You just need to call the show method and pass the mode as a parameter:
+You just need to call the show method and pass the HUD mode as a parameter:
 
 ```swift
 DLProgressHUD.show(.loading)
 ```
+
+## Available HUD modes
+
+| Mode   |      Description      |
+|:----------:|:-------------:|
+| loading |  HUD with an activity indicator only |
+| loadingWithText(_ text: String) |  HUD with an activity indicator and a text label below it |
+| textOnly(_ text: String) |  HUD with a text label only |
+| image(_ image: UIImage) |  HUD with an image view only |
+| imageWithText(image: UIImage, text: String) |  HUD with an image view and a text label below it |
 
 ## Appearance and presentation configuration
 
