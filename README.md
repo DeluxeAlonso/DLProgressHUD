@@ -5,6 +5,8 @@
 [![License](https://img.shields.io/cocoapods/l/DLProgressHUD.svg?style=flat)](https://cocoapods.org/pods/DLProgressHUD)
 [![Platform](https://img.shields.io/cocoapods/p/DLProgressHUD.svg?style=flat)](https://cocoapods.org/pods/DLProgressHUD)
 
+Lightweight Progress HUD implementation for iOS.
+
 ## Demo
 
 | Loading   |      Loading with text      | Text only     |      Image     |      Image with text      |
