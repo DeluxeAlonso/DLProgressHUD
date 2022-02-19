@@ -13,7 +13,7 @@ final class HudImageView: UIView {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.distribution = .fillProportionally
-        stackView.spacing = 4
+        stackView.spacing = configuration.imageAndTextSpacing
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
