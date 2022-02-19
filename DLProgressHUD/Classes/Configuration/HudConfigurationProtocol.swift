@@ -65,6 +65,7 @@ public protocol HudConfigurationProtocol {
     /// Available only for *textOnly* mode. It will only have an effect if *allowsDynamicTextWidth* is set to true.
     var horizontalDynamicTextPadding: CGFloat { get }
 
+    /// Spacing between image view and text label when using imageWithText mode.
     var imageAndTextSpacing: CGFloat { get }
 
 }
