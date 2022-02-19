@@ -65,6 +65,8 @@ public protocol HudConfigurationProtocol {
     /// Available only for *textOnly* mode. It will only have an effect if *allowsDynamicTextWidth* is set to true.
     var horizontalDynamicTextPadding: CGFloat { get }
 
+    var imageAndTextSpacing: CGFloat { get }
+
 }
 
 public extension HudConfigurationProtocol {
@@ -112,5 +114,7 @@ public extension HudConfigurationProtocol {
     var horizontalDynamicTextMargin: CGFloat { 32.0 }
 
     var horizontalDynamicTextPadding: CGFloat { 24.0 }
+
+    var imageAndTextSpacing: CGFloat { 4.0 }
 
 }
