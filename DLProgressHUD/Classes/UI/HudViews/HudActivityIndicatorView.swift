@@ -13,7 +13,7 @@ final class HudActivityIndicatorView: UIView {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.distribution = .fillProportionally
-        stackView.spacing = 12
+        stackView.spacing = configuration.loadingIndicatorAndTextSpacing
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
     }()
