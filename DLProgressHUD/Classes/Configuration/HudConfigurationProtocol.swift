@@ -67,6 +67,8 @@ public protocol HudConfigurationProtocol {
 
     /// Spacing between image view and text label when using imageWithText mode.
     var imageAndTextSpacing: CGFloat { get }
+    /// Spacing between loading indicator and text label when using loadingWithText mode.
+    var loadingIndicatorAndTextSpacing: CGFloat { get }
 
 }
 
