@@ -120,4 +120,6 @@ public extension HudConfigurationProtocol {
 
     var imageAndTextSpacing: CGFloat { 4.0 }
 
+    var loadingIndicatorAndTextSpacing: CGFloat  { 12.0 }
+
 }
