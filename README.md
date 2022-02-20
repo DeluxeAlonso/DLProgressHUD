@@ -52,7 +52,7 @@ DLProgressHUD.show(.loading)
 
 ## Appearance and presentation configuration
 
-There are two ways to configure the appearance and presentation of `DLAutoSlidePageViewController`:
+There are two ways to configure the appearance and presentation of `DLProgressHUD`:
 
 1) You can do it globally using the `DefaultHudConfiguration` class before instantiation.
 
@@ -72,7 +72,7 @@ struct HudCustomConfiguration: HudConfigurationProtocol {
 ```
 
 ```swift
-let configuration = HudTextOnlyConfiguration()
+let configuration = HudCustomConfiguration()
 DLProgressHUD.show(.textOnly("Loading..."), configuration: configuration)
 ```
 
