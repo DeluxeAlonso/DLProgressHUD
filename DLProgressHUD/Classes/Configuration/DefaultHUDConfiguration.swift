@@ -55,4 +55,8 @@ public class DefaultHudConfiguration: HudConfigurationProtocol {
 
     public var horizontalDynamicTextPadding: CGFloat = 24.0
 
+    public var imageAndTextSpacing: CGFloat = 4.0
+
+    public var loadingIndicatorAndTextSpacing: CGFloat = 12.0
+
 }
