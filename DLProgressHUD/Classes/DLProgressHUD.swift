@@ -21,6 +21,7 @@ public class DLProgressHUD {
         if hudContainerView != nil { dismissWithoutAnimation() }
 
         hudContainerView = HudContainerView(configuration: configuration, hudMode: mode)
+        hudContainerView?.delegate = self
         hudContainerView?.translatesAutoresizingMaskIntoConstraints = false
         guard let hudContainerView = hudContainerView else { return }
         hudContainerView.alpha = 0.0
@@ -106,6 +107,16 @@ public extension DLProgressHUD {
         case image(_ image: UIImage)
         /// HUD with an image view and a text label below it.
         case imageWithText(image: UIImage, text: String)
+    }
+
+}
+
+// MARK: - HudContainerViewDelegate
+
+extension DLProgressHUD: HudContainerViewDelegate {
+
+    func hudContainerView(_ hudContainerView: HudContainerView, didTapHUDContent shouldClose: Bool) {
+        if shouldClose { dismiss(with: configuration.automaticDismissAnimationDuration) }
     }
 
 }

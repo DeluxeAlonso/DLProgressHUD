@@ -32,6 +32,8 @@ class HudContainerView: UIView {
     private let configuration: HudConfigurationProtocol
     private let hudMode: DLProgressHUD.Mode
 
+    weak var delegate: HudContainerViewDelegate?
+
     // MARK: - Initializers
 
     init(configuration: HudConfigurationProtocol, hudMode: DLProgressHUD.Mode) {
@@ -79,7 +81,7 @@ class HudContainerView: UIView {
                                      contentView.topAnchor.constraint(equalTo: hudContentView.topAnchor),
                                      contentView.bottomAnchor.constraint(equalTo: hudContentView.bottomAnchor)])
 
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: Selector("handleHudContentViewTap:"))
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: Selector("handleHudContentViewTap"))
         hudContentView.addGestureRecognizer(tapGestureRecognizer)
     }
 
@@ -99,7 +101,7 @@ class HudContainerView: UIView {
     }
 
     @objc private func handleHudContentViewTap() {
-        
+        delegate?.hudContainerView(self, didTapHUDContent: configuration.shouldDismissOnTouch)
     }
 
 }
