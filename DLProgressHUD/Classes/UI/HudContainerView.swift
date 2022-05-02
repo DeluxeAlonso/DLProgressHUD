@@ -7,6 +7,12 @@
 
 import UIKit
 
+protocol HudContainerViewDelegate: AnyObject {
+
+    func hudContainerView(_ hudContainerView: HudContainerView, didTapHUDContent shouldClose: Bool)
+
+}
+
 class HudContainerView: UIView {
 
     private lazy var hudContentView: UIVisualEffectView = {
@@ -18,6 +24,10 @@ class HudContainerView: UIView {
     }()
 
     // MARK: - Dependencies
+
+    deinit {
+        print("HudContainerView")
+    }
 
     private let configuration: HudConfigurationProtocol
     private let hudMode: DLProgressHUD.Mode
@@ -68,6 +78,9 @@ class HudContainerView: UIView {
                                      contentView.trailingAnchor.constraint(equalTo: hudContentView.trailingAnchor),
                                      contentView.topAnchor.constraint(equalTo: hudContentView.topAnchor),
                                      contentView.bottomAnchor.constraint(equalTo: hudContentView.bottomAnchor)])
+
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: Selector("handleHudContentViewTap:"))
+        hudContentView.addGestureRecognizer(tapGestureRecognizer)
     }
 
     private func makeContentView(for hudMode: DLProgressHUD.Mode) -> UIView {
@@ -83,6 +96,10 @@ class HudContainerView: UIView {
         case .textOnly(let text):
             return HudTextOnlyView(configuration: configuration, descriptionText: text)
         }
+    }
+
+    @objc private func handleHudContentViewTap() {
+        
     }
 
 }
