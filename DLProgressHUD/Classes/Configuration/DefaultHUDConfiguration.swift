@@ -11,7 +11,7 @@ public class DefaultHudConfiguration: HudConfigurationProtocol {
 
     public static let shared = DefaultHudConfiguration()
 
-    init() {}
+    private init() {}
 
     public var backgroundColor: UIColor = .clear
 

@@ -12,6 +12,8 @@ public class DLProgressHUD {
     private var hudContainerView: HudContainerView?
     private var presentationTimer: Timer?
 
+    public static let defaultConfiguration = DefaultHudConfiguration.shared
+
     public init() {}
 
     private func show(in parentView: UIView, with configuration: HudConfigurationProtocol, and mode: Mode, completion: ((Bool) -> Void)?) {
@@ -66,8 +68,6 @@ public class DLProgressHUD {
 }
 
 public extension DLProgressHUD {
-
-    static var defaultConfiguration = DefaultHudConfiguration.shared
 
     @available(iOSApplicationExtension, unavailable)
     class func show(_ mode: Mode = .loading,
