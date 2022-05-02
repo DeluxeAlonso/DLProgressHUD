@@ -52,11 +52,12 @@ public protocol HudConfigurationProtocol {
 
     /// If set to true HUD gets automatically dismissed after the  elapsed time defined by *presentationDuration* is over.
     var shouldDismissAutomatically: Bool { get }
-
     /// Presentation duration of the progress HUD. It will only have an effect if *shouldDismissAutomatically* is set to true.
     var presentationDuration: TimeInterval { get }
     /// Automatic dismiss animation duration of the progress HUD. It will only have an effect if *shouldDismissAutomatically* is set to true.
     var automaticDismissAnimationDuration: CGFloat { get }
+
+    var shouldDismissOnTouch: Bool { get }
 
     /// Available only for *textOnly* mode.
     var allowsDynamicTextWidth: Bool { get }
