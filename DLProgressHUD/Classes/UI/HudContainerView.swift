@@ -13,7 +13,7 @@ protocol HudContainerViewDelegate: AnyObject {
 
 }
 
-class HudContainerView: UIView {
+final class HudContainerView: UIView {
 
     private lazy var hudContentView: UIVisualEffectView = {
         let view = UIVisualEffectView(effect: UIBlurEffect(style: configuration.hudContentVisualEffectBlurStyle))
