@@ -19,15 +19,12 @@ class HudContainerView: UIView {
         let view = UIVisualEffectView(effect: UIBlurEffect(style: configuration.hudContentVisualEffectBlurStyle))
         view.clipsToBounds = true
         view.layer.masksToBounds = true
+        view.isUserInteractionEnabled = true
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
 
     // MARK: - Dependencies
-
-    deinit {
-        print("HudContainerView")
-    }
 
     private let configuration: HudConfigurationProtocol
     private let hudMode: DLProgressHUD.Mode
@@ -51,7 +48,7 @@ class HudContainerView: UIView {
     // MARK: - Private
 
     private func setupUI() {
-        isUserInteractionEnabled = !configuration.backgroundInteractionEnabled
+        isUserInteractionEnabled = shouldAllowUserInteraction
 
         backgroundColor = configuration.backgroundColor
 
@@ -81,7 +78,7 @@ class HudContainerView: UIView {
                                      contentView.topAnchor.constraint(equalTo: hudContentView.topAnchor),
                                      contentView.bottomAnchor.constraint(equalTo: hudContentView.bottomAnchor)])
 
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: Selector("handleHudContentViewTap"))
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.handleHudContentViewTap))
         hudContentView.addGestureRecognizer(tapGestureRecognizer)
     }
 
@@ -102,6 +99,14 @@ class HudContainerView: UIView {
 
     @objc private func handleHudContentViewTap() {
         delegate?.hudContainerView(self, didTapHUDContent: configuration.shouldDismissOnTouch)
+    }
+
+    // MARK: - Utils
+
+    var shouldAllowUserInteraction: Bool {
+        // If shouldDismissOnTouch is true container view should allow user interaction.
+        guard !configuration.shouldDismissOnTouch else { return true }
+        return !configuration.backgroundInteractionEnabled
     }
 
 }

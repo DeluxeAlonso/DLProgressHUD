@@ -116,7 +116,7 @@ public extension DLProgressHUD {
 extension DLProgressHUD: HudContainerViewDelegate {
 
     func hudContainerView(_ hudContainerView: HudContainerView, didTapHUDContent shouldClose: Bool) {
-        if shouldClose { dismiss(with: configuration.automaticDismissAnimationDuration) }
+        if shouldClose { dismiss() }
     }
 
 }
