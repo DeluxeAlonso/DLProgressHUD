@@ -113,6 +113,8 @@ public extension HudConfigurationProtocol {
 
     var automaticDismissAnimationDuration: CGFloat { 0.5 }
 
+    var shouldDismissOnTouch: Bool { false }
+
     var allowsDynamicTextWidth: Bool { false }
 
     var horizontalDynamicTextMargin: CGFloat { 32.0 }

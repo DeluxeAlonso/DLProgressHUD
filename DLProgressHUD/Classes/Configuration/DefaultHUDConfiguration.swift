@@ -45,6 +45,8 @@ public class DefaultHudConfiguration: HudConfigurationProtocol {
 
     public var shouldDismissAutomatically: Bool = false
 
+    public var shouldDismissOnTouch: Bool = false
+
     public var presentationDuration: TimeInterval = 3.0
 
     public var automaticDismissAnimationDuration: CGFloat = 0.5
