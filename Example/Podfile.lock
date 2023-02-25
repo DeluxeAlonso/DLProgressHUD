@@ -1,5 +1,5 @@
 PODS:
-  - DLProgressHUD (0.1.0)
+  - DLProgressHUD (0.1.11)
 
 DEPENDENCIES:
   - DLProgressHUD (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  DLProgressHUD: a08757c77c55e12138e3e3abdcb3e32bb85be797
+  DLProgressHUD: f12e0392143d7b72e904fdee74be563425237651
 
 PODFILE CHECKSUM: a0efe7df6751410f77b6fec5cffbefcf31283a16
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.11.3
