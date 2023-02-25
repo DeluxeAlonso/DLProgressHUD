@@ -37,4 +37,8 @@ class ViewController: UIViewController {
         DLProgressHUD.show(.imageWithText(image: UIImage(named: "Check")!, text: "Success!"))
     }
 
+    @IBAction func dismissHUD(_ sender: Any) {
+        DLProgressHUD.dismiss(with: 0.25)
+    }
+
 }

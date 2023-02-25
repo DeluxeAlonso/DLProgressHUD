@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="uF8-Zu-GaE">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -19,10 +20,10 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="3V4-Jh-FgR">
-                                <rect key="frame" x="75.5" y="181.5" width="224" height="304"/>
+                                <rect key="frame" x="58" y="181.5" width="259.5" height="304"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKT-Hl-5VD">
-                                        <rect key="frame" x="0.0" y="0.0" width="224" height="48"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="259.5" height="48"/>
                                         <color key="backgroundColor" red="0.30980392159999998" green="0.4941176471" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="Mtf-u3-9RF"/>
@@ -36,7 +37,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Etd-ec-uZt">
-                                        <rect key="frame" x="0.0" y="64" width="224" height="48"/>
+                                        <rect key="frame" x="0.0" y="64" width="259.5" height="48"/>
                                         <color key="backgroundColor" red="0.30980392159999998" green="0.4941176471" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Show HUD with text">
@@ -47,7 +48,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWc-HF-7ZV">
-                                        <rect key="frame" x="0.0" y="128" width="224" height="48"/>
+                                        <rect key="frame" x="0.0" y="128" width="259.5" height="48"/>
                                         <color key="backgroundColor" red="0.30980392159999998" green="0.4941176471" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Show HUD with text only">
@@ -58,7 +59,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k14-UU-I6B">
-                                        <rect key="frame" x="0.0" y="192" width="224" height="48"/>
+                                        <rect key="frame" x="0.0" y="192" width="259.5" height="48"/>
                                         <color key="backgroundColor" red="0.30980392159999998" green="0.4941176471" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Show HUD with image">
@@ -69,7 +70,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UdU-d3-fp8" userLabel="Show HUD with image and text">
-                                        <rect key="frame" x="0.0" y="256" width="224" height="48"/>
+                                        <rect key="frame" x="0.0" y="256" width="259.5" height="48"/>
                                         <color key="backgroundColor" red="0.30980392159999998" green="0.4941176471" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Show HUD with image and text">
@@ -88,8 +89,33 @@
                             <constraint firstItem="3V4-Jh-FgR" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="eRO-V7-Qqj"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="hat-Ej-gia">
+                        <barButtonItem key="rightBarButtonItem" title="Dismiss HUD" id="2Bn-ai-jDn">
+                            <connections>
+                                <action selector="dismissHUD:" destination="vXZ-lx-hvc" id="21N-Yc-toh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1064.8" y="130.88455772113943"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="XX0-Xu-ktu">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uF8-Zu-GaE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="p3I-Ab-dAf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="pUo-0K-Swm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gEc-Ch-IHR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="125.59999999999999" y="130.88455772113943"/>
         </scene>

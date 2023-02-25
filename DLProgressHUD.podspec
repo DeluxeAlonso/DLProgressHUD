@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'DLProgressHUD'
-  s.version          = '0.1.11'
+  s.version          = '1.0.0'
   s.summary          = 'Lightweight Progress HUD implementation for iOS.'
 
   s.description      = <<-DESC
@@ -12,7 +12,7 @@ Lightweight and highly configurable Progress HUD implementation for iOS.
   s.author           = { 'DeluxeAlonso' => 'alonso.alvarez.dev@gmail.com' }
   s.source           = { :git => 'https://github.com/DeluxeAlonso/DLProgressHUD.git', :tag => s.version.to_s }
 
-  s.ios.deployment_target = '12.0'
+  s.ios.deployment_target = '13.0'
 
   s.source_files = 'DLProgressHUD/Classes/**/*.swift'
   s.swift_versions = ['5.0']
