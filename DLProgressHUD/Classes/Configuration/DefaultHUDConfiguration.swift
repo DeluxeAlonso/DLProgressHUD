@@ -19,7 +19,7 @@ public class DefaultHudConfiguration: HudConfigurationProtocol {
 
     public var activityIndicatorColor: UIColor = UIColor.darkGray
 
-    public var activityIndicatorStyle: UIActivityIndicatorView.Style = .whiteLarge
+    public var activityIndicatorStyle: UIActivityIndicatorView.Style = .large
 
     public var hudContentPreferredWidth: CGFloat = 120.0
 
