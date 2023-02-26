@@ -1,6 +1,6 @@
 {
   "name": "DLProgressHUD",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "summary": "Lightweight Progress HUD implementation for iOS.",
   "description": "Lightweight and highly configurable Progress HUD implementation for iOS.",
   "homepage": "https://github.com/DeluxeAlonso/DLProgressHUD",
@@ -13,10 +13,14 @@
   },
   "source": {
     "git": "https://github.com/DeluxeAlonso/DLProgressHUD.git",
-    "tag": "0.1.0"
+    "tag": "1.0.0"
   },
   "platforms": {
-    "ios": "12.0"
+    "ios": "13.0"
   },
-  "source_files": "DLProgressHUD/Classes/**/*.swift"
+  "source_files": "DLProgressHUD/Classes/**/*.swift",
+  "swift_versions": [
+    "5.0"
+  ],
+  "swift_version": "5.0"
 }

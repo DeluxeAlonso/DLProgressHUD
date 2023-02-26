@@ -81,7 +81,7 @@ public extension HudConfigurationProtocol {
 
     var activityIndicatorColor: UIColor { UIColor.darkGray }
 
-    var activityIndicatorStyle: UIActivityIndicatorView.Style { .whiteLarge }
+    var activityIndicatorStyle: UIActivityIndicatorView.Style { .large }
 
     var hudContentPreferredWidth: CGFloat { 120.0 }
 
