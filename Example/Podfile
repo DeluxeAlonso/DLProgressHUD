@@ -1,6 +1,6 @@
 use_frameworks!
 
-platform :ios, '13.0'
+platform :ios, '14.0'
 
 target 'DLProgressHUD_Example' do
   pod 'DLProgressHUD', :path => '../'
